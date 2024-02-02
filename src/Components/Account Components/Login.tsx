@@ -1,5 +1,5 @@
-import { useUser } from "../Providers/UsersProvider";
-import { AccountForm } from "./Account Components/AccountForm";
+import { useUser } from "../../Providers/UsersProvider";
+import { AccountForm } from "./AccountForm";
 
 export const Login = () => {
   const { userLogin } = useUser();

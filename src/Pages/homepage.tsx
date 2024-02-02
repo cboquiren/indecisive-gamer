@@ -1,5 +1,5 @@
-import { CreateUser } from "../Components/CreateUser";
-import { Login } from "../Components/login";
+import { CreateUser } from "../Components/Account Components/CreateUser";
+import { Login } from "../Components/Account Components/Login";
 import { useUser } from "../Providers/UsersProvider";
 
 export const Homepage = () => {

@@ -24,13 +24,7 @@ export const UserProvider = ({ children }: { children: ReactNode }) => {
     });
   };
 
-  // const usernameCheck = (username: string) => {
-  //   return userRequests.checkUsername(username);
-  // };
-
   const createUser = (user: Omit<TUser, "id">) => {
-    // usernameCheck(user.username);
-
     return userRequests.createUser(user).then((newUser: TUser) => {
       setUser(newUser);
       toast.success(`Welcome ${newUser.username}!`);

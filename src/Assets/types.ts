@@ -22,3 +22,37 @@ export type TUser = {
   password: string,
   id: number
 }
+
+type TFavorite = {
+  userId: number,
+  gameId: number,
+  type: 'favorite',
+  isFavorite: boolean,
+  id: number
+}
+
+type TPlayed = {
+  userId: number,
+  gameId: number,
+  type: 'played',
+  hasPlayed: boolean,
+  id: number
+}
+
+type TOwned = {
+  userId: number,
+  gameId: number,
+  type: 'owned',
+  isOwned: boolean,
+  id: number
+}
+
+type THidden = {
+  userId: number,
+  gameId: number,
+  type: 'hidden',
+  isHidden: boolean,
+  id: number
+}
+
+export type TInteraction = TFavorite | TPlayed | TOwned | THidden;

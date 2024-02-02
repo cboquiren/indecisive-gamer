@@ -1,5 +1,6 @@
 import { Homepage } from "./Pages/homepage";
 import { GamesProvider } from "./Providers/GamesProvider";
+import { InteractionsProvider } from "./Providers/InteractionsProvider";
 import { UserProvider } from "./Providers/UsersProvider";
 
 function App() {
@@ -7,7 +8,9 @@ function App() {
     <>
       <GamesProvider>
         <UserProvider>
-          <Homepage></Homepage>
+          <InteractionsProvider>
+            <Homepage></Homepage>
+          </InteractionsProvider>
         </UserProvider>
       </GamesProvider>
     </>
