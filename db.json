@@ -220,46 +220,42 @@
     {
       "username": "kuya",
       "password": "password",
-      "id": "0"
+      "id": 0
     },
     {
       "username": "carl",
       "password": "test",
-      "id": "1"
+      "id": 1
     },
     {
       "username": "arj",
       "password": "mona",
-      "id": "2"
+      "id": 2
     }
   ],
-  "interactions" : [
+  "interactions": [
     {
       "type": "favorite",
       "userId": 0,
       "gameId": 2,
-      "isFavorite": true,
       "id": 0
     },
     {
       "type": "played",
       "userId": 0,
       "gameId": 2,
-      "hasPlayed": true,
       "id": 1
     },
     {
       "type": "owned",
       "userId": 0,
       "gameId": 2,
-      "isOwned": true,
       "id": 2
     },
     {
       "type": "hidden",
       "userId": 0,
       "gameId": 8,
-      "isHidden": true,
       "id": 3
     }
   ]

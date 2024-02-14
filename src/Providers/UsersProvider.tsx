@@ -40,7 +40,7 @@ export const UserProvider = ({ children }: { children: ReactNode }) => {
 
   const userLogout = () => {
     setUser(null);
-    toast.success("Successfully logged out!");
+    toast.success("Successfully Logged Out!");
   };
 
   return (

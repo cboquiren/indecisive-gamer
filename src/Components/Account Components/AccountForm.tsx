@@ -42,14 +42,14 @@ export const AccountForm = ({
           label="username"
           inputProps={{
             value: usernameInput === null ? "" : usernameInput,
-            onChange: (e) => setUsernameInput(e.target.value),
+            onChange: (e) => setUsernameInput(e.target.value.trim()),
           }}
         />
         <AFInputContainer
           label="password"
           inputProps={{
             value: passwordInput === null ? "" : passwordInput,
-            onChange: (e) => setPasswordInput(e.target.value),
+            onChange: (e) => setPasswordInput(e.target.value.trim()),
           }}
         />
         <button type="submit">{buttonLabel}</button>

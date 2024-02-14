@@ -6,7 +6,6 @@ export type TGame = {
   "genre-2"?: string,
   "genre-3"?: string,
   "genre-4"?: string,
-  'allGenres'?: string[],
   image: string,
   developer: string,
   "platform-0": string,
@@ -27,7 +26,6 @@ type TFavorite = {
   userId: number,
   gameId: number,
   type: 'favorite',
-  isFavorite: boolean,
   id: number
 }
 
@@ -35,7 +33,6 @@ type TPlayed = {
   userId: number,
   gameId: number,
   type: 'played',
-  hasPlayed: boolean,
   id: number
 }
 
@@ -43,7 +40,6 @@ type TOwned = {
   userId: number,
   gameId: number,
   type: 'owned',
-  isOwned: boolean,
   id: number
 }
 
@@ -51,7 +47,6 @@ type THidden = {
   userId: number,
   gameId: number,
   type: 'hidden',
-  isHidden: boolean,
   id: number
 }
 
