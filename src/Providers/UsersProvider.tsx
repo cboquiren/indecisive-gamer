@@ -8,7 +8,6 @@ type TUserContext = {
   setUser: Dispatch<SetStateAction<TUser | null>>;
   userLogin: (user: Omit<TUser, "id">) => Promise<TUser>;
   verifyNewUser: (user: Omit<TUser, "id">) => Promise<TUser>;
-  userLogout: () => void;
 };
 
 const UserContext = createContext<TUserContext | undefined>(undefined);
@@ -38,13 +37,8 @@ export const UserProvider = ({ children }: { children: ReactNode }) => {
     });
   };
 
-  const userLogout = () => {
-    setUser(null);
-    toast.success("Successfully Logged Out!");
-  };
-
   return (
-    <UserContext.Provider value={{ user, setUser, userLogin, verifyNewUser, userLogout }}>
+    <UserContext.Provider value={{ user, setUser, userLogin, verifyNewUser }}>
       {children}
     </UserContext.Provider>
   );

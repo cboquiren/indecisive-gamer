@@ -19,35 +19,35 @@ export type TGame = {
 export type TUser = {
   username: string,
   password: string,
-  id: number
+  id: string
 }
 
 type TFavorite = {
-  userId: number,
+  userId: string,
   gameId: number,
   type: 'favorite',
-  id: number
+  id: string
 }
 
 type TPlayed = {
-  userId: number,
+  userId: string,
   gameId: number,
   type: 'played',
-  id: number
+  id: string
 }
 
 type TOwned = {
-  userId: number,
+  userId: string,
   gameId: number,
   type: 'owned',
-  id: number
+  id: string
 }
 
 type THidden = {
-  userId: number,
+  userId: string,
   gameId: number,
   type: 'hidden',
-  id: number
+  id: string
 }
 
 export type TInteraction = TFavorite | TPlayed | TOwned | THidden;

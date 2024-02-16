@@ -21,6 +21,7 @@ export const genresList = [
 ]
 
 export const developersList = [
+  "Any Developer",
   "Riot Games",
   "Mojang Studios",
   "Valve Corporation",
@@ -34,4 +35,14 @@ export const developersList = [
   "Larian Studios",
   "Blizzard Entertainment",
   "Wizards of the Coast LLC"
+]
+
+
+export const platformsList = [
+  "Any Platform",
+  "PC",
+  "Mobile",
+  "Xbox",
+  "PlayStation",
+  "Switch"
 ]

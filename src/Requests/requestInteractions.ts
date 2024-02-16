@@ -30,7 +30,7 @@ const createInteraction = (data: Omit<TInteraction, 'id'>) => {
   })
 };
 
-const deleteInteraction = <T>(data: T) => {
+const deleteInteraction = (data: string) => {
   return fetch(`${base_interactions_URL}/${data}`, {
     method: "DELETE",
   }).then((response) => {

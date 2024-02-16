@@ -18,6 +18,7 @@ type TInteractionContext = {
   userDataArrs: TUserDataArr;
   newInteraction: (data: Omit<TInteraction, "id">) => Promise<TInteraction>;
   removeInteraction: (data: Omit<TInteraction, "id">) => Promise<TInteraction>;
+  userLogout: () => void;
 };
 
 type TUserDataArr = {
@@ -31,12 +32,12 @@ const InteractionContext = createContext<TInteractionContext | undefined>(undefi
 
 export const InteractionsProvider = ({ children }: { children: ReactNode }) => {
   const [userInteractions, setUserInteractions] = useState<TInteraction[]>([]);
-  const { user } = useUser();
+  const { user, setUser } = useUser();
 
   const fetchUserInteractions = () => {
     return interactionsRequests.requestInteractions().then((response: TInteraction[]) => {
       if (user) {
-        const filterUser = response.filter((interaction) => interaction.userId === Number(user.id));
+        const filterUser = response.filter((interaction) => interaction.userId === user.id);
         setUserInteractions(filterUser);
       }
     });
@@ -90,6 +91,12 @@ export const InteractionsProvider = ({ children }: { children: ReactNode }) => {
     });
   };
 
+  const userLogout = () => {
+    setUser(null);
+    setUserInteractions([]);
+    toast.success("Successfully Logged Out!");
+  };
+
   return (
     <InteractionContext.Provider
       value={{
@@ -98,6 +105,7 @@ export const InteractionsProvider = ({ children }: { children: ReactNode }) => {
         userDataArrs,
         newInteraction,
         removeInteraction,
+        userLogout,
       }}
     >
       {children}
