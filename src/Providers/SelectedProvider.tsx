@@ -1,5 +1,5 @@
 import { Dispatch, ReactNode, SetStateAction, createContext, useContext, useState } from "react";
-import { TGame } from "../Assets/types";
+import { TGame, TUserGameArrs } from "../Assets/types";
 import { useGames } from "./GamesProvider";
 import { useInteractions } from "./InteractionsProvider";
 import { genresList } from "../Assets/data-lists";
@@ -8,15 +8,7 @@ type TSelectedContext = {
   selectedGame: TGame | null;
   setSelectedGame: Dispatch<SetStateAction<TGame | null>>;
   selectRandom: () => void;
-  userGameArrs: {
-    favG: TGame[];
-    playedG: TGame[];
-    ownedG: TGame[];
-    hiddenG: TGame[];
-    userAvailG: TGame[];
-    devFilter: TGame[] | undefined;
-    genreFilter: TGame[] | undefined;
-  };
+  userGameArrs: TUserGameArrs;
 };
 
 const SelectedContext = createContext<TSelectedContext | undefined>(undefined);
@@ -86,6 +78,8 @@ export const SelectedProvider = ({ children }: { children: ReactNode }) => {
     devFilter: filterDev(),
     genreFilter: filterGenre(),
   };
+
+  console.log(selectedGame);
 
   return (
     <SelectedContext.Provider value={{ selectedGame, setSelectedGame, selectRandom, userGameArrs }}>

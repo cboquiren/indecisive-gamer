@@ -51,3 +51,25 @@ type THidden = {
 }
 
 export type TInteraction = TFavorite | TPlayed | TOwned | THidden;
+
+
+export type TUserGameArrs = {
+  favG: TGame[];
+    playedG: TGame[];
+    ownedG: TGame[];
+    hiddenG: TGame[];
+    userAvailG: TGame[];
+    devFilter: TGame[] | undefined;
+    genreFilter: TGame[] | undefined;
+}
+
+export type TSuggestionFormStates = {
+  selectGenres: string[],
+  selectedDev: string,
+  selectPlatform: string,
+  allowHidden: boolean,
+  newOnly: boolean,
+  playedOnly: boolean,
+  ownedOnly: boolean,
+  favOnly: boolean
+}

@@ -4,9 +4,8 @@ import { developersList, genresList, platformsList } from "../Assets/data-lists"
 import { GenreSelect } from "./Suggestion Form/genreButtons";
 import { CheckboxInput } from "./SFCheckbox";
 import { useUser } from "../Providers/UsersProvider";
-import { Transform } from "../Assets/transformations";
 import { useGames } from "../Providers/GamesProvider";
-import { TGame } from "../Assets/types";
+import { makeSuggestion } from "./Suggestion Form/suggestionFormLogic";
 
 export const SuggestionForm = () => {
   const [selectGenres, setSelectGenres] = useState<string[]>([]);
@@ -41,56 +40,30 @@ export const SuggestionForm = () => {
     setFavOnly(false);
   };
 
-  const optionalFilter = (arr: TGame[], filter: "playedG" | "ownedG" | "favG") => {
-    return arr.filter((game) => {
-      return userGameArrs[filter].map((game) => game.id).includes(game.id);
-    });
-  };
-
-  const makeSuggestion = () => {
-    let games = Transform.shuffle(userGameArrs.userAvailG);
-    if (allowHidden) {
-      games = Transform.shuffle(allGamesRaw);
-    }
-    if (newOnly) {
-      const newGames = games.filter((game) => {
-        return !userGameArrs.playedG.map((game) => game.id).includes(game.id);
-      });
-      games = Transform.shuffle(newGames);
-    }
-    if (playedOnly) {
-      games = Transform.shuffle(optionalFilter(games, "playedG"));
-    }
-    if (ownedOnly) {
-      games = Transform.shuffle(optionalFilter(games, "ownedG"));
-    }
-    if (favOnly) {
-      games = Transform.shuffle(optionalFilter(games, "favG"));
-    }
-
-    if (selectedDev !== "Any Developer") {
-      games = Transform.shuffle(games.filter((game) => game.developer === selectedDev));
-    }
-    if (selectPlatform !== "Any Platform") {
-      const platformGames = games.filter((game) => {
-        const gamePlatforms = Object.values(game).filter((value) => {
-          if (typeof value === "string") {
-            return platformsList.includes(value);
-          }
-        });
-        return gamePlatforms.includes(selectPlatform);
-      });
-      games = Transform.shuffle(platformGames);
-    }
-
-    console.log(games);
-  };
-
-  console.log(makeSuggestion());
-
   return (
     <div>
-      <form action="">
+      <form
+        action=""
+        onSubmit={(e) => {
+          e.preventDefault();
+          setSelectedGame(
+            makeSuggestion({
+              states: {
+                selectGenres,
+                selectedDev,
+                selectPlatform,
+                allowHidden,
+                favOnly,
+                newOnly,
+                ownedOnly,
+                playedOnly,
+              },
+              allGamesRaw,
+              userGameArrs,
+            })
+          );
+        }}
+      >
         <h2>What do you feel like playing today?</h2>
         <div>
           <h4>Genre Selection</h4>

@@ -1,5 +1,5 @@
 export const genresList = [
-  "MOBA(Multiplater Online Battle Arena",
+  "MOBA(Multiplayer Online Battle Arena)",
   "Strategy",
   "Co-op",
   "RPG(Role-Playing Game)",
@@ -13,11 +13,12 @@ export const genresList = [
   "Action",
   "Sports",
   "Simulation",
-  "Party",
   "Battle-Royale",
   "Shooter",
   "Card",
-  "Fantasy"
+  "Fantasy",
+  "Puzzle",
+  "FPS(First Person Shooter)",
 ]
 
 export const developersList = [
@@ -34,7 +35,14 @@ export const developersList = [
   "Sledgehammer Games",
   "Larian Studios",
   "Blizzard Entertainment",
-  "Wizards of the Coast LLC"
+  "Wizards of the Coast LLC",
+  "Team17",
+  "Avalanche Software",
+  "Maxis",
+  "Nintendo",
+  "Tarsier Studios",
+  "EA (Electronic Arts)",
+  "Naughty Dog"
 ]
 
 
