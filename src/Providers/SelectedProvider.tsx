@@ -79,8 +79,6 @@ export const SelectedProvider = ({ children }: { children: ReactNode }) => {
     genreFilter: filterGenre(),
   };
 
-  console.log(selectedGame);
-
   return (
     <SelectedContext.Provider value={{ selectedGame, setSelectedGame, selectRandom, userGameArrs }}>
       {children}

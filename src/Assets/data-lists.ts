@@ -42,7 +42,8 @@ export const developersList = [
   "Nintendo",
   "Tarsier Studios",
   "EA (Electronic Arts)",
-  "Naughty Dog"
+  "Naughty Dog",
+  "Ubisoft"
 ]
 
 

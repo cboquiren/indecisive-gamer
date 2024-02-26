@@ -1,4 +1,3 @@
-import { Route, Routes } from "react-router";
 import { Navbar } from "./Components/Navbar";
 import { Homepage } from "./Pages/homepage";
 import { GamesProvider } from "./Providers/GamesProvider";
@@ -9,6 +8,7 @@ import { Library } from "./Pages/library";
 import { GameHighlight } from "./Pages/gameHighlight";
 import { SignIn } from "./Pages/signIn";
 import { SuggestionPage } from "./Pages/suggestionForm";
+import { Routes, Route } from "react-router-dom";
 
 function App() {
   return (
@@ -17,6 +17,7 @@ function App() {
         <UserProvider>
           <InteractionsProvider>
             <SelectedProvider>
+              <div className="rpgui-content"></div>
               <Navbar />
               <Routes>
                 <Route path="/" element={<Homepage />}></Route>

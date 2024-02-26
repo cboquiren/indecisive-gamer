@@ -1,4 +1,4 @@
-import { SuggestionForm } from "../Components/SuggestionForm";
+import { SuggestionForm } from "../Components/Suggestion Form/SuggestionForm";
 
 export const SuggestionPage = () => {
   return (

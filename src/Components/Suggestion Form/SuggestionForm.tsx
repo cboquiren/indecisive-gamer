@@ -1,11 +1,11 @@
 import { useState } from "react";
-import { useSelected } from "../Providers/SelectedProvider";
-import { developersList, genresList, platformsList } from "../Assets/data-lists";
-import { GenreSelect } from "./Suggestion Form/genreButtons";
+import { useSelected } from "../../Providers/SelectedProvider";
+import { developersList, genresList, platformsList } from "../../Assets/data-lists";
+import { GenreSelect } from "./genreButtons";
 import { CheckboxInput } from "./SFCheckbox";
-import { useUser } from "../Providers/UsersProvider";
-import { useGames } from "../Providers/GamesProvider";
-import { makeSuggestion } from "./Suggestion Form/suggestionFormLogic";
+import { useUser } from "../../Providers/UsersProvider";
+import { useGames } from "../../Providers/GamesProvider";
+import { makeSuggestion } from "./suggestionFormLogic";
 
 export const SuggestionForm = () => {
   const [selectGenres, setSelectGenres] = useState<string[]>([]);
