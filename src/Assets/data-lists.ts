@@ -55,3 +55,10 @@ export const platformsList = [
   "PlayStation",
   "Switch"
 ]
+
+export const pixelLogos = [
+  "nes-logo",
+  "nes-jp-logo",
+  "snes-logo",
+  "snes-jp-logo"
+]

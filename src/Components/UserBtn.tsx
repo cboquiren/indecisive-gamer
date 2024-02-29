@@ -11,27 +11,46 @@ export const UserBtn = () => {
 
   return (
     <div id="user-container" className="nes-pointer">
-      {user && (
-        <div className="user-nav">
-          <h3>{`Welcome ${Transform.capitalize(user.username)}!`}</h3>
-          <div
+      {/* {user && (
+        <a className="nes-badge">
+          <span className="is-success">{`Welcome ${Transform.capitalize(user.username)}!`}</span>
+          <span
             onClick={() => {
               userLogout();
             }}
           >
             Logout
-          </div>
+          </span>
+        </a>
+      )} */}
+      {user && (
+        <div id="user-nav">
+          <a href="#" className="nes-badge" id="user-name">
+            <span className="is-success">{`Hello ${Transform.capitalize(user.username)}`}</span>
+            <div className="logout-container">
+              <a href="#" className="nes-badge" id="logout">
+                <span
+                  className="is-error"
+                  onClick={() => {
+                    userLogout();
+                  }}
+                >
+                  Logout
+                </span>
+              </a>
+            </div>
+          </a>
         </div>
       )}
       {!user && (
-        <div
-          className="user-nav"
+        <button
+          className="nes-btn is-warning"
           onClick={() => {
             navigate("/sign-in");
           }}
         >
           Sign Up/Login
-        </div>
+        </button>
       )}
     </div>
   );

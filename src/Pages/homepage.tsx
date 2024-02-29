@@ -14,7 +14,7 @@ export const Homepage = () => {
   const navigate = useNavigate();
 
   return (
-    <div>
+    <div className="container">
       <h1>This is the Homepage</h1>
       <p>{name}</p>
       <p>{game}</p>

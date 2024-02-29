@@ -3,6 +3,7 @@ body {
   padding: 0;
   font-family: "Press Start 2P", system-ui;
   font-size: .75rem;
+  background-color: rgb(87, 93, 88);
 }
 
 *, ::after, ::before {box-sizing: border-box;}
@@ -16,8 +17,13 @@ ul, p, h1, h2, h3, h4, h5 {
 }
 
 .container {
-  width: 100%;
+  max-width: 1140px;
   padding: 0 1rem;
   margin: 0 auto;
   margin-bottom: 1rem;
+  background-color: white;
+}
+
+.nes-container {
+  background-color: white;
 }

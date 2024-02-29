@@ -5,16 +5,49 @@ nav {
   align-items: center;
 }
 
-nav #user-container {
-  margin-left: 2rem;
+#nav {margin: 1rem;}
+
+#user-nav {height: 3rem;}
+
+#user-nav #user-name{
+  width: 15rem;
+  font-size: 1rem;
+  position: relative;
+}
+
+#user-nav .logout-container {
+  display: none;
+  position: absolute;
+  left: 2rem;
+  top: 2.5rem;
+}
+
+#user-nav:hover .logout-container { display: block;}
+
+#user-container .nes-btn {width: 15rem;}
+
+
+#title {
+  font-size: 1.5rem;
+  color: rgb(146, 204, 65);
 }
 
 #indecisive {
   font-family: 'Gloria Halllelujah', cursive;
+  color: rgb(247, 213, 29);
+  font-size: 1.7rem;
+  letter-spacing: 2px;
 }
 
 nav .links-container {
   display: flex;
   justify-content: space-around;
-  width: 35%;
+  width: 30%;
+}
+
+.links-container .user-links{
+  font-size: 0.6rem;
+  margin: 0 0.5rem;
+  display: flex;
+  align-items: center;
 }

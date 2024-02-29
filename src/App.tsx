@@ -17,7 +17,6 @@ function App() {
         <UserProvider>
           <InteractionsProvider>
             <SelectedProvider>
-              <div className="rpgui-content"></div>
               <Navbar />
               <Routes>
                 <Route path="/" element={<Homepage />}></Route>
