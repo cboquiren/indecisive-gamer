@@ -16,6 +16,12 @@ ul, p, h1, h2, h3, h4, h5 {
   list-style: none;
 }
 
+img {
+  max-width: 100%;
+  max-height: 100%;
+  vertical-align: middle;
+}
+
 .container {
   max-width: 1140px;
   padding: 0 1rem;
@@ -26,4 +32,8 @@ ul, p, h1, h2, h3, h4, h5 {
 
 .nes-container {
   background-color: white;
+}
+
+@media (min-resolution: 0.001dpcm) and (-webkit-min-device-pixel-ratio: 0) {
+  .nes-btn {border-image-repeat: stretch;}
 }

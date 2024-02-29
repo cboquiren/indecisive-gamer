@@ -11,18 +11,6 @@ export const UserBtn = () => {
 
   return (
     <div id="user-container" className="nes-pointer">
-      {/* {user && (
-        <a className="nes-badge">
-          <span className="is-success">{`Welcome ${Transform.capitalize(user.username)}!`}</span>
-          <span
-            onClick={() => {
-              userLogout();
-            }}
-          >
-            Logout
-          </span>
-        </a>
-      )} */}
       {user && (
         <div id="user-nav">
           <a href="#" className="nes-badge" id="user-name">

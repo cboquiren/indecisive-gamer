@@ -51,3 +51,16 @@ nav .links-container {
   display: flex;
   align-items: center;
 }
+
+#home-container {
+  padding: 1rem;
+}
+
+#game-card {
+  height: 20rem;
+  width: 15rem;
+}
+
+#game-card .box-art-container {
+  height: 10rem;
+}
