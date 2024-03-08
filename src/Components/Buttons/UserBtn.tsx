@@ -1,6 +1,6 @@
-import { Transform } from "../Assets/transformations";
-import { useInteractions } from "../Providers/InteractionsProvider";
-import { useUser } from "../Providers/UsersProvider";
+import { Transform } from "../../Assets/transformations";
+import { useInteractions } from "../../Providers/InteractionsProvider";
+import { useUser } from "../../Providers/UsersProvider";
 import { useNavigate } from "react-router-dom";
 
 export const UserBtn = () => {
@@ -10,13 +10,13 @@ export const UserBtn = () => {
   const navigate = useNavigate();
 
   return (
-    <div id="user-container" className="nes-pointer">
+    <div id="user-container">
       {user && (
         <div id="user-nav">
-          <a href="#" className="nes-badge" id="user-name">
+          <div className="nes-badge" id="user-name">
             <span className="is-success">{`Hello ${Transform.capitalize(user.username)}`}</span>
-            <div className="logout-container">
-              <a href="#" className="nes-badge" id="logout">
+            <div className="logout-container nes-pointer">
+              <div className="nes-badge" id="logout">
                 <span
                   className="is-error"
                   onClick={() => {
@@ -25,9 +25,9 @@ export const UserBtn = () => {
                 >
                   Logout
                 </span>
-              </a>
+              </div>
             </div>
-          </a>
+          </div>
         </div>
       )}
       {!user && (

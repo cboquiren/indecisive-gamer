@@ -34,6 +34,18 @@ img {
   background-color: white;
 }
 
+.nes-container.with-title>.title {
+  background-color: rgb(26, 26, 26);
+  color: white;
+  border-radius: 15px;
+  padding: 0.3rem;
+}
+
+.nes-container.is-rounded.with-title.is-centered>.title {
+  padding: 1rem;
+  margin-top: -2rem
+}
+
 @media (min-resolution: 0.001dpcm) and (-webkit-min-device-pixel-ratio: 0) {
   .nes-btn {border-image-repeat: stretch;}
 }

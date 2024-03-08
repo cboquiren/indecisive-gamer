@@ -1,3 +1,4 @@
+/* Navbar Styles */
 nav {
   display: flex;
   height: 5rem;
@@ -52,15 +53,151 @@ nav .links-container {
   align-items: center;
 }
 
-#home-container {
+/* Pages Styles */
+
+.page-container {
   padding: 1rem;
 }
+
+#library {
+  background-color: rgb(38, 64, 120);
+  padding-bottom: 5rem;
+}
+
+#library-nav {
+  width: 90%;
+  margin: 1rem auto;
+  padding: 0.5rem 0;
+  background-color: rgb(200, 200, 200);
+}
+
+#library-nav ul {
+  width: 100%;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+}
+
+#library-nav ul li {
+  width: 15%;
+}
+
+#card-container {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+/* GameCard Styles */
 
 #game-card {
   height: 20rem;
   width: 15rem;
+  margin: 2rem;
+  margin-bottom: 7rem;
+}
+
+#game-card .with-title {
+  height: 20rem;
+}
+
+#game-card .card-title {
+  margin-top: -2.5rem;
+  font-size: 0.6rem;
+  padding: 0.9rem 0.4rem;
 }
 
 #game-card .box-art-container {
-  height: 10rem;
+  height: 15rem;
+}
+
+#game-card .box-art-container img {
+  border-radius: 10px;
+}
+
+#game-card:hover .is-centered {
+  background-color: rgb(53, 204, 255);
+}
+
+#game-card:hover #interaction-container {
+  background-color: rgb(127, 133, 128);
+}
+
+#interaction-container {
+  display: flex;
+  justify-content: space-between;
+  padding: 1rem 1.5rem;
+}
+
+#hide .message, 
+#own .message,
+#play .message,
+#like .message {
+  position: relative;
+}
+
+.message .from-left {
+  display: none;
+  position: absolute;
+  top: -6rem;
+  padding: 0.5rem 0.75rem;
+  left: -1.5rem;
+}
+
+.message .from-right {
+  display: none;
+  position: absolute;
+  top: -6rem;
+  left: -4.5rem;
+  padding: 0.5rem 0.75rem;
+}
+
+#hide-false .from-left,
+#hide-true .from-left {
+  top: -7rem;
+}
+
+#own-false .from-left,
+#play-false .from-right {
+  top: -8rem;
+}
+
+#like-false .from-right {
+  top: -7rem;
+  left: -3rem;
+}
+
+#own-true .from-left,
+#play-true .from-right {
+  top: -9.1rem;
+}
+
+#like-true .from-right {
+  top: -7rem;
+  left: -4.5rem;
+}
+
+#close-disable .nes-icon.close::before {
+  color: rgb(173, 175, 187);
+}
+
+#own-disable .nes-icon.coin::before,
+#play-disable .nes-icon.trophy::before {
+  color: rgb(245, 245, 220);
+}
+
+#own-false .nes-icon.coin::before,
+#play-false .nes-icon.trophy::before {
+  color: rgb(200, 200, 200);
+}
+
+#hide-true .nes-icon.close::before {
+  color: rgb(242, 36, 38);
+}
+
+#hide:hover .message .from-left,
+#own:hover .message .from-left,
+#play:hover .message .from-right,
+#like:hover .message .from-right {
+  display: block;
 }

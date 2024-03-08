@@ -1,7 +1,7 @@
 import { useState } from "react";
 import { useSelected } from "../../Providers/SelectedProvider";
 import { developersList, genresList, platformsList } from "../../Assets/data-lists";
-import { GenreSelect } from "./genreButtons";
+import { GenreSelect } from "./genreSelect";
 import { CheckboxInput } from "./SFCheckbox";
 import { useUser } from "../../Providers/UsersProvider";
 import { useGames } from "../../Providers/GamesProvider";

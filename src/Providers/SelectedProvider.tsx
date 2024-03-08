@@ -5,8 +5,8 @@ import { useInteractions } from "./InteractionsProvider";
 import { genresList } from "../Assets/data-lists";
 
 type TSelectedContext = {
-  selectedGame: TGame | null;
-  setSelectedGame: Dispatch<SetStateAction<TGame | null>>;
+  selectedGame: TGame | null | undefined;
+  setSelectedGame: Dispatch<SetStateAction<TGame | null | undefined>>;
   selectRandom: () => void;
   userGameArrs: TUserGameArrs;
 };
@@ -14,7 +14,7 @@ type TSelectedContext = {
 const SelectedContext = createContext<TSelectedContext | undefined>(undefined);
 
 export const SelectedProvider = ({ children }: { children: ReactNode }) => {
-  const [selectedGame, setSelectedGame] = useState<TGame | null>(null);
+  const [selectedGame, setSelectedGame] = useState<TGame | null | undefined>(null);
   const { allGamesRaw } = useGames();
   const { userDataArrs } = useInteractions();
 

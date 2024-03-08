@@ -11,7 +11,7 @@ export const AFInputContainer = ({
   return (
     <div className={`${label}-container`}>
       <label htmlFor={label}>{Transform.capitalize(label)}</label>
-      <input type="text" {...inputProps} />
+      <input type="text" id={label} {...inputProps} />
     </div>
   );
 };

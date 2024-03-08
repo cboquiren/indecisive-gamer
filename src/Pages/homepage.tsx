@@ -16,7 +16,7 @@ export const Homepage = () => {
   const navigate = useNavigate();
 
   return (
-    <div className="container" id="home-container">
+    <div className="container page-container" id="home-container">
       <div className="nes-container is-rounded with-title is-centered ">
         <h1 className="title">Homepage</h1>
         <p>{name}</p>

@@ -11,7 +11,7 @@
       "image": "https://howlongtobeat.com/games/5203_League_of_Legends.jpg",
       "developer": "Riot Games",
       "platform-0": "PC",
-      "id": 0
+      "id": "0"
     },
     {
       "name": "Minecraft",
@@ -28,7 +28,7 @@
       "platform-2": "Xbox",
       "platform-3": "PlayStation",
       "platform-4": "Switch",
-      "id": 1
+      "id": "1"
     },
     {
       "name": "The Elder Scrolls V: Skyrim",
@@ -44,7 +44,7 @@
       "platform-1": "Switch",
       "platform-2": "Xbox",
       "platform-3": "PlayStation",
-      "id": 2
+      "id": "2"
     },
     {
       "name": "Counter-Strike 2",
@@ -57,7 +57,7 @@
       "image": "https://preview.redd.it/recreated-counter-strike-2-cover-using-official-assets-from-v0-2aje85n5k0sa1.png?auto=webp&s=5ad5480488e615d759cc3eacf04e87e64f12e02e",
       "developer": "Valve Corporation",
       "platform-0": "PC",
-      "id": 3
+      "id": "3"
     },
     {
       "name": "Grand Theft Auto V",
@@ -70,7 +70,7 @@
       "platform-0": "PC",
       "platform-1": "Xbox",
       "platform-2": "PlayStation",
-      "id": 4
+      "id": "4"
     },
     {
       "name": "Rocket League",
@@ -85,7 +85,7 @@
       "platform-1": "Xbox",
       "platform-2": "PlayStation",
       "platform-3": "Switch",
-      "id": 5
+      "id": "5"
     },
     {
       "name": "Among Us",
@@ -100,7 +100,7 @@
       "platform-2": "Xbox",
       "platform-3": "PlayStation",
       "platform-4": "Switch",
-      "id": 6
+      "id": "6"
     },
     {
       "name": "Stardew Valley",
@@ -117,7 +117,7 @@
       "platform-2": "Xbox",
       "platform-3": "PlayStation",
       "platform-4": "Switch",
-      "id": 7
+      "id": "7"
     },
     {
       "name": "Fortnite",
@@ -134,7 +134,7 @@
       "platform-2": "Xbox",
       "platform-3": "PlayStation",
       "platform-4": "Switch",
-      "id": 8
+      "id": "8"
     },
     {
       "name": "Dota 2",
@@ -147,7 +147,7 @@
       "image": "https://thumbnails.pcgamingwiki.com/d/db/Dota_2_cover.jpg/300px-Dota_2_cover.jpg",
       "developer": "Valve Corporation",
       "platform-0": "PC",
-      "id": 9
+      "id": "9"
     },
     {
       "name": "Call of Duty: Modern Warfare 3 (2023)",
@@ -161,7 +161,7 @@
       "platform-0": "PC",
       "platform-1": "Xbox",
       "platform-2": "PlayStation",
-      "id": 10
+      "id": "10"
     },
     {
       "name": "Baldur's Gate 3",
@@ -174,7 +174,7 @@
       "platform-0": "PC",
       "platform-1": "Xbox",
       "platform-2": "PlayStation",
-      "id": 11
+      "id": "11"
     },
     {
       "name": "Overwatch 2",
@@ -189,7 +189,7 @@
       "platform-1": "Xbox",
       "platform-2": "PlayStation",
       "platform-3": "Switch",
-      "id": 12
+      "id": "12"
     },
     {
       "name": "Hearthstone",
@@ -200,7 +200,7 @@
       "developer": "Blizzard Entertainment",
       "platform-0": "PC",
       "platform-1": "Mobile",
-      "id": 13
+      "id": "13"
     },
     {
       "name": "Magic: The Gathering Arena",
@@ -212,7 +212,7 @@
       "developer": "Wizards of the Coast LLC",
       "platform-0": "PC",
       "platform-1": "Mobile",
-      "id": 14
+      "id": "14"
     },
     {
       "name": "Overcooked 2",
@@ -226,14 +226,14 @@
       "platform-0": "PC",
       "platform-1": "Xbox",
       "platform-2": "PlayStation",
-      "platform-3":"Switch",
-      "id": 15
+      "platform-3": "Switch",
+      "id": "15"
     },
     {
       "name": "Hogwarts Legacy",
       "description": "Hogwarts Legacy is an action role-playing game set in the wizarding world of Harry Potter, allowing players to attend Hogwarts School of Witchcraft and Wizardry in the 1800s, explore its magical grounds, learn spells, brew potions, and embark on an epic adventure while uncovering the mysteries of the wizarding world.",
       "genre-0": "Open-World",
-      "genre-1":"RPG(Role-Playing Game)",
+      "genre-1": "RPG(Role-Playing Game)",
       "genre-2": "Adventure",
       "genre-3": "Fantasy",
       "genre-4": "Action",
@@ -243,7 +243,7 @@
       "platform-1": "Xbox",
       "platform-2": "PlayStation",
       "platform-3": "Switch",
-      "id": 16
+      "id": "16"
     },
     {
       "name": "The Sims 4",
@@ -257,7 +257,7 @@
       "platform-0": "PC",
       "platform-1": "Xbox",
       "platform-2": "PlayStation",
-      "id": 17
+      "id": "17"
     },
     {
       "name": "Valorant",
@@ -270,7 +270,7 @@
       "image": "https://m.media-amazon.com/images/I/71LTpSLz57L._AC_UF894,1000_QL80_.jpg",
       "developer": "Riot Games",
       "platform-0": "PC",
-      "id": 18
+      "id": "18"
     },
     {
       "name": "Animal Crossing: New Horizons",
@@ -282,7 +282,7 @@
       "image": "https://www.giantbomb.com/a/uploads/scale_medium/8/82063/3179211-acnhart.jpg",
       "developer": "Nintendo",
       "platform-0": "Switch",
-      "id": 19
+      "id": "19"
     },
     {
       "name": "Portal",
@@ -296,7 +296,7 @@
       "platform-1": "Xbox",
       "platform-2": "PlayStation",
       "platform-3": "Switch",
-      "id": 20
+      "id": "20"
     },
     {
       "name": "Team Fortress 2",
@@ -311,7 +311,7 @@
       "platform-0": "PC",
       "platform-1": "Xbox",
       "platform-2": "PlayStation",
-      "id": 21
+      "id": "21"
     },
     {
       "name": "Little Nightmares",
@@ -326,7 +326,7 @@
       "platform-1": "Xbox",
       "platform-2": "PlayStation",
       "platform-3": "Mobile",
-      "id": 22
+      "id": "22"
     },
     {
       "name": "Madden NFL 22",
@@ -340,7 +340,7 @@
       "platform-0": "PC",
       "platform-1": "Xbox",
       "platform-2": "PlayStation",
-      "id": 23
+      "id": "23"
     },
     {
       "name": "Fallout Shelter",
@@ -357,7 +357,7 @@
       "platform-2": "PlayStation",
       "platform-3": "Switch",
       "platform-4": "Mobile",
-      "id": 24
+      "id": "24"
     },
     {
       "name": "The Legend of Zelda: Breath of the Wild",
@@ -370,7 +370,7 @@
       "image": "https://m.media-amazon.com/images/I/71cLrQZpajL._AC_UF894,1000_QL80_.jpg",
       "developer": "Nintendo",
       "platform-0": "Switch",
-      "id": 25
+      "id": "25"
     },
     {
       "name": "The Last of Us",
@@ -379,11 +379,11 @@
       "genre-1": "Shooter",
       "genre-2": "Adventure",
       "genre-3": "Action",
-      "image": "The Last of Us is a action-adventure game set in a post-apocalyptic world overrun by infected humans, where players control Joel, a smuggler, and Ellie, a young girl with immunity to the infection, as they journey across the United States, facing danger, moral dilemmas, and emotional challenges while forming a deep bond.",
+      "image": "https://m.media-amazon.com/images/I/71-hlREKk6L.jpg",
       "developer": "Naughty Dog",
       "platform-0": "PC",
       "platform-1": "PlayStation",
-      "id": 26
+      "id": "26"
     },
     {
       "name": "Super Mario Odyssey",
@@ -395,7 +395,7 @@
       "image": "https://gamerant.com/wp-content/uploads/super-mario-odyssey-box-art-sombrero.jpeg",
       "developer": "Nintendo",
       "platform-0": "Switch",
-      "id": 27
+      "id": "27"
     },
     {
       "name": "The Elder Scrolls: Blades",
@@ -408,7 +408,7 @@
       "developer": "Bethesda Game Studios",
       "platform-0": "Mobile",
       "platform-1": "Switch",
-      "id": 28
+      "id": "28"
     },
     {
       "name": "Assassin's Creed Valhalla",
@@ -423,7 +423,7 @@
       "platform-0": "PC",
       "platform-1": "Xbox",
       "platform-2": "PlayStation",
-      "id": 29
+      "id": "29"
     }
   ],
   "users": [
@@ -445,28 +445,238 @@
   ],
   "interactions": [
     {
-      "type": "favorite",
-      "userId": "0",
-      "gameId": 2,
-      "id": 0
-    },
-    {
       "type": "played",
       "userId": "0",
       "gameId": 2,
-      "id": 1
+      "id": "1"
     },
     {
       "type": "owned",
       "userId": "0",
       "gameId": 2,
-      "id": 2
+      "id": "2"
     },
     {
-      "type": "hidden",
-      "userId": "0",
+      "id": "cddc",
+      "gameId": 16,
+      "type": "favorite",
+      "userId": "0"
+    },
+    {
+      "id": "dc79",
+      "gameId": 7,
+      "type": "favorite",
+      "userId": "0"
+    },
+    {
+      "id": "0ebd",
+      "gameId": 18,
+      "type": "favorite",
+      "userId": "0"
+    },
+    {
+      "id": "6a3d",
+      "gameId": 19,
+      "type": "favorite",
+      "userId": "0"
+    },
+    {
+      "id": "af5b",
+      "gameId": 24,
+      "type": "favorite",
+      "userId": "0"
+    },
+    {
+      "id": "f0d5",
+      "gameId": 2,
+      "type": "favorite",
+      "userId": "0"
+    },
+    {
+      "id": "c0cd",
+      "gameId": 0,
+      "type": "favorite",
+      "userId": "0"
+    },
+    {
+      "id": "7688",
+      "gameId": 7,
+      "type": "owned",
+      "userId": "0"
+    },
+    {
+      "id": "c237",
+      "gameId": 16,
+      "type": "owned",
+      "userId": "0"
+    },
+    {
+      "id": "36b2",
+      "gameId": 18,
+      "type": "owned",
+      "userId": "0"
+    },
+    {
+      "id": "c981",
+      "gameId": 19,
+      "type": "owned",
+      "userId": "0"
+    },
+    {
+      "id": "9a77",
+      "gameId": 20,
+      "type": "owned",
+      "userId": "0"
+    },
+    {
+      "id": "0a2d",
+      "gameId": 21,
+      "type": "owned",
+      "userId": "0"
+    },
+    {
+      "id": "e518",
+      "gameId": 22,
+      "type": "owned",
+      "userId": "0"
+    },
+    {
+      "id": "34b0",
+      "gameId": 24,
+      "type": "owned",
+      "userId": "0"
+    },
+    {
+      "id": "6eb2",
+      "gameId": 15,
+      "type": "owned",
+      "userId": "0"
+    },
+    {
+      "id": "e9dc",
+      "gameId": 3,
+      "type": "owned",
+      "userId": "0"
+    },
+    {
+      "id": "4ef0",
+      "gameId": 13,
+      "type": "favorite",
+      "userId": "0"
+    },
+    {
+      "id": "cb59",
+      "gameId": 20,
+      "type": "favorite",
+      "userId": "0"
+    },
+    {
+      "id": "7058",
+      "gameId": 25,
+      "type": "favorite",
+      "userId": "0"
+    },
+    {
+      "id": "e664",
+      "gameId": 29,
+      "type": "favorite",
+      "userId": "0"
+    },
+    {
+      "id": "7de9",
+      "gameId": 0,
+      "type": "owned",
+      "userId": "0"
+    },
+    {
+      "id": "c68b",
+      "gameId": 0,
+      "type": "played",
+      "userId": "0"
+    },
+    {
+      "id": "2576",
+      "gameId": 7,
+      "type": "played",
+      "userId": "0"
+    },
+    {
+      "id": "3afb",
+      "gameId": 15,
+      "type": "played",
+      "userId": "0"
+    },
+    {
+      "id": "1f49",
+      "gameId": 16,
+      "type": "played",
+      "userId": "0"
+    },
+    {
+      "id": "4f79",
+      "gameId": 18,
+      "type": "played",
+      "userId": "0"
+    },
+    {
+      "id": "f4ab",
+      "gameId": 19,
+      "type": "played",
+      "userId": "0"
+    },
+    {
+      "id": "c9bf",
+      "gameId": 22,
+      "type": "played",
+      "userId": "0"
+    },
+    {
+      "id": "0855",
+      "gameId": 25,
+      "type": "played",
+      "userId": "0"
+    },
+    {
+      "id": "9a9b",
+      "gameId": 12,
+      "type": "played",
+      "userId": "0"
+    },
+    {
+      "id": "9175",
+      "gameId": 9,
+      "type": "owned",
+      "userId": "0"
+    },
+    {
+      "id": "313d",
+      "gameId": 6,
+      "type": "played",
+      "userId": "0"
+    },
+    {
+      "id": "ac97",
+      "gameId": 1,
+      "type": "favorite",
+      "userId": "0"
+    },
+    {
+      "id": "9dca",
+      "gameId": 15,
+      "type": "favorite",
+      "userId": "0"
+    },
+    {
+      "id": "3f6a",
       "gameId": 8,
-      "id": 3
+      "type": "hidden",
+      "userId": "0"
+    },
+    {
+      "id": "6f39",
+      "gameId": 14,
+      "type": "owned",
+      "userId": "0"
     }
   ]
 }

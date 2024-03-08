@@ -1,6 +1,6 @@
 import { useNavigate } from "react-router-dom";
 import { useSelected } from "../Providers/SelectedProvider";
-import { UserBtn } from "./UserBtn";
+import { UserBtn } from "./Buttons/UserBtn";
 import { pixelLogos } from "../Assets/data-lists";
 import { useEffect, useState } from "react";
 
