@@ -3,10 +3,10 @@
     {
       "name": "League of Legends",
       "description": "League of Legends is a team-based multiplayer online battle arena game where two teams of five players compete to destroy each other's Nexus, controlling unique champions with diverse abilities and strategically navigating a map filled with lanes, structures, and neutral objectives.",
-      "genre-0": "MOBA(Multiplayer Online Battle Arena)",
+      "genre-0": "MOBA (Multiplayer Online Battle Arena)",
       "genre-1": "Strategy",
       "genre-2": "Co-op",
-      "genre-3": "RPG(Role-Playing Game)",
+      "genre-3": "RPG (Role-Playing Game)",
       "genre-4": "Action",
       "image": "https://howlongtobeat.com/games/5203_League_of_Legends.jpg",
       "developer": "Riot Games",
@@ -35,7 +35,7 @@
       "description": "The Elder Scrolls V: Skyrim is an open-world action role-playing game set in a vast and immersive fantasy world. Players assume the role of the Dragonborn, a prophesized hero, and embark on an epic journey filled with exploration, quests, combat, and the ability to shape their character's destiny through various choices and abilities like magic, combat skills, and character development.",
       "genre-0": "Open-World",
       "genre-1": "Exploration",
-      "genre-2": "RPG(Role-Playing Game)",
+      "genre-2": "RPG (Role-Playing Game)",
       "genre-3": "Fighting",
       "genre-4": "Adventure",
       "image": "https://s.pacn.ws/1/p/mu/the-elder-scrolls-v-skyrim-411465.10.jpg?v=rlr4k6&width=",
@@ -49,7 +49,7 @@
     {
       "name": "Counter-Strike 2",
       "description": "Counter-Strike: Global Offensive (CS:GO) is a popular team-based first-person shooter where players join either terrorist or counter-terrorist teams, engaging in objective-based matches involving tasks like planting/defusing bombs or rescuing/capturing hostages. The game emphasizes tactical gameplay, teamwork, weapon strategy, and precise aiming skills across various maps and game modes.",
-      "genre-0": "FPS(First Person Shooter)",
+      "genre-0": "FPS (First Person Shooter)",
       "genre-1": "Multiplayer",
       "genre-2": "Strategy",
       "genre-3": "Shooter",
@@ -106,7 +106,7 @@
       "name": "Stardew Valley",
       "description": "Stardew Valley is a farming simulation game where players inherit and cultivate a farm, interact with villagers, explore caves, fish, mine, and build relationships while managing their time and resources.",
       "genre-0": "Simulation",
-      "genre-1": "RPG(Role-Playing Game)",
+      "genre-1": "RPG (Role-Playing Game)",
       "genre-2": "Adventure",
       "genre-3": "Strategy",
       "genre-4": "Action",
@@ -139,10 +139,10 @@
     {
       "name": "Dota 2",
       "description": "Dota 2 is a multiplayer online battle arena (MOBA) game where two teams of five players select unique heroes with distinct abilities, working together to destroy the enemy's Ancient while strategizing, farming resources, and engaging in team fights.",
-      "genre-0": "MOBA(Multiplayer Online Battle Arena)",
+      "genre-0": "MOBA (Multiplayer Online Battle Arena)",
       "genre-1": "Strategy",
       "genre-2": "Co-op",
-      "genre-3": "RPG(Role-Playing Game)",
+      "genre-3": "RPG (Role-Playing Game)",
       "genre-4": "Action",
       "image": "https://thumbnails.pcgamingwiki.com/d/db/Dota_2_cover.jpg/300px-Dota_2_cover.jpg",
       "developer": "Valve Corporation",
@@ -152,7 +152,7 @@
     {
       "name": "Call of Duty: Modern Warfare 3 (2023)",
       "description": "Modern Warfare 3 is a first-person shooter game set in a modern-day conflict, offering a single-player campaign mode as well as multiplayer modes featuring fast-paced combat and various customization options.",
-      "genre-0": "FPS(First Person Shooter)",
+      "genre-0": "FPS (First Person Shooter)",
       "genre-1": "Shooter",
       "genre-2": "Multiplayer",
       "genre-3": "Action",
@@ -166,7 +166,7 @@
     {
       "name": "Baldur's Gate 3",
       "description": "Baldur's Gate 3 is a role-playing game set in the Dungeons & Dragons universe, featuring a rich narrative, character customization, party-based adventuring, and turn-based combat in a detailed fantasy world.",
-      "genre-0": "RPG(Role-Playing Game)",
+      "genre-0": "RPG (Role-Playing Game)",
       "genre-1": "Adventure",
       "genre-2": "Strategy",
       "image": "https://preview.redd.it/new-game-cover-from-larians-website-v0-m2lmw222h0ka1.png?auto=webp&s=ba904ad42906960a96a70ce1c27ee6d3ff5edead",
@@ -179,7 +179,7 @@
     {
       "name": "Overwatch 2",
       "description": "Overwatch 2 is a team-based multiplayer first-person shooter with cooperative and competitive gameplay, focusing on hero-based combat, objective-based missions, and various game modes while expanding the lore of the Overwatch universe.",
-      "genre-0": "FPS(First Person Shooter)",
+      "genre-0": "FPS (First Person Shooter)",
       "genre-1": "Shooter",
       "genre-2": "Multiplayer",
       "genre-3": "Action",
@@ -233,7 +233,7 @@
       "name": "Hogwarts Legacy",
       "description": "Hogwarts Legacy is an action role-playing game set in the wizarding world of Harry Potter, allowing players to attend Hogwarts School of Witchcraft and Wizardry in the 1800s, explore its magical grounds, learn spells, brew potions, and embark on an epic adventure while uncovering the mysteries of the wizarding world.",
       "genre-0": "Open-World",
-      "genre-1": "RPG(Role-Playing Game)",
+      "genre-1": "RPG (Role-Playing Game)",
       "genre-2": "Adventure",
       "genre-3": "Fantasy",
       "genre-4": "Action",
@@ -262,7 +262,7 @@
     {
       "name": "Valorant",
       "description": "Valorant is a free-to-play multiplayer tactical first-person shooter game where teams of five players compete in objective-based matches, combining precise gunplay with unique agent abilities in strategic gameplay reminiscent of classic tactical shooters like Counter-Strike.",
-      "genre-0": "FPS(First Person Shooter)",
+      "genre-0": "FPS (First Person Shooter)",
       "genre-1": "Action",
       "genre-2": "Strategy",
       "genre-3": "Multiplayer",
@@ -277,7 +277,7 @@
       "description": "Animal Crossing: New Horizons is a life simulation game where players escape to a deserted island, building and customizing their own paradise, interacting with anthropomorphic animal villagers, fishing, bug-catching, gardening, and enjoying a relaxing and charming virtual world filled with creativity and exploration.",
       "genre-0": "Simulation",
       "genre-1": "Adventure",
-      "genre-2": "RPG(Role-Playing Game)",
+      "genre-2": "RPG (Role-Playing Game)",
       "genre-3": "Sandbox",
       "image": "https://www.giantbomb.com/a/uploads/scale_medium/8/82063/3179211-acnhart.jpg",
       "developer": "Nintendo",
@@ -288,7 +288,7 @@
       "name": "Portal",
       "description": "Portal is a puzzle-platform game where players navigate through a series of test chambers using a portal gun to create linked portals on surfaces, solving spatial puzzles and overcoming obstacles to progress through the game's narrative-driven story.",
       "genre-0": "Puzzle",
-      "genre-1": "FPS(First Person Shooter)",
+      "genre-1": "FPS (First Person Shooter)",
       "genre-2": "Shooter",
       "image": "https://howlongtobeat.com/games/256px-Portal_standalonebox.jpg",
       "developer": "Valve Corporation",
@@ -301,7 +301,7 @@
     {
       "name": "Team Fortress 2",
       "description": "Team Fortress 2 (TF2) is a team-based multiplayer first-person shooter game featuring a variety of character classes with unique abilities, emphasizing teamwork, strategy, and objective-based gameplay across various game modes, including capture the flag, payload, and control point.",
-      "genre-0": "FPS(First Person Shooter)",
+      "genre-0": "FPS (First Person Shooter)",
       "genre-1": "Strategy",
       "genre-2": "Shooter",
       "genre-3": "Action",
@@ -348,7 +348,7 @@
       "genre-0": "Simulation",
       "genre-1": "Survival",
       "genre-2": "Strategy",
-      "genre-3": "RPG(Role-Playing Game)",
+      "genre-3": "RPG (Role-Playing Game)",
       "genre-4": "Sandbox",
       "image": "https://assetsio.reedpopcdn.com/co6p4w.jpg?width=1200&height=1200&fit=bounds&quality=70&format=jpg&auto=webp",
       "developer": "Bethesda Game Studios",
@@ -401,7 +401,7 @@
       "name": "The Elder Scrolls: Blades",
       "description": "The Elder Scrolls: Blades is a free-to-play action role-playing game set in the Elder Scrolls universe, where players create and customize their own character, explore dungeons, complete quests, build and upgrade their town, and engage in combat against various enemies, all while uncovering a rich narrative set in the world of Tamriel.",
       "genre-0": "Action",
-      "genre-1": "RPG(Role-Playing Game)",
+      "genre-1": "RPG (Role-Playing Game)",
       "genre-2": "Adventure",
       "genre-3": "Fighting",
       "image": "data:image/jpeg;base64,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",
@@ -413,7 +413,7 @@
     {
       "name": "Assassin's Creed Valhalla",
       "description": "Assassin's Creed Valhalla is an action role-playing game set in the Viking Age, where players control Eivor, a Norse warrior, as they lead their clan from Norway to England, engaging in exploration, combat, and stealth gameplay while forging alliances, building settlements, and unraveling the mysteries of the Assassin-Templar conflict.",
-      "genre-0": "RPG(Role-Playing Game)",
+      "genre-0": "RPG (Role-Playing Game)",
       "genre-1": "Fighting",
       "genre-2": "Adventure",
       "genre-3": "Action",
@@ -637,12 +637,6 @@
       "userId": "0"
     },
     {
-      "id": "9a9b",
-      "gameId": 12,
-      "type": "played",
-      "userId": "0"
-    },
-    {
       "id": "9175",
       "gameId": 9,
       "type": "owned",
@@ -676,6 +670,30 @@
       "id": "6f39",
       "gameId": 14,
       "type": "owned",
+      "userId": "0"
+    },
+    {
+      "id": "fcbf",
+      "gameId": 5,
+      "type": "owned",
+      "userId": "0"
+    },
+    {
+      "id": "fe94",
+      "gameId": 10,
+      "type": "favorite",
+      "userId": "0"
+    },
+    {
+      "id": "f676",
+      "gameId": 12,
+      "type": "owned",
+      "userId": "0"
+    },
+    {
+      "id": "ce03",
+      "gameId": 14,
+      "type": "played",
       "userId": "0"
     }
   ]

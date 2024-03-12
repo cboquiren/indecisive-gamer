@@ -1,8 +1,8 @@
 export const genresList = [
-  "MOBA(Multiplayer Online Battle Arena)",
+  "MOBA (Multiplayer Online Battle Arena)",
   "Strategy",
   "Co-op",
-  "RPG(Role-Playing Game)",
+  "RPG (Role-Playing Game)",
   "Sandbox",
   "Open-World",
   "Survival",
@@ -18,7 +18,7 @@ export const genresList = [
   "Card",
   "Fantasy",
   "Puzzle",
-  "FPS(First Person Shooter)",
+  "FPS (First Person Shooter)",
 ]
 
 export const developersList = [
