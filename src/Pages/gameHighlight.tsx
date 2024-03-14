@@ -1,4 +1,5 @@
 import { genresList, platformsList } from "../Assets/data-lists";
+import { Transform } from "../Assets/transformations";
 import { PreviewSimilar } from "../Components/previewSimilar";
 import { Tags } from "../Components/tags";
 import { useSelected } from "../Providers/SelectedProvider";
@@ -7,11 +8,9 @@ export const GameHighlight = () => {
   const { selectedGame, userGameArrs } = useSelected();
   const { devFilter, genreFilter } = userGameArrs;
 
-  console.log("devs", devFilter);
-  console.log("genres", genreFilter);
   return (
-    <div className="container page-container">
-      <div className="nes-container is-rounded with-title is-centered" id="highlight">
+    <div className="container">
+      <div className="nes-container is-rounded with-title is-centered blue-bg" id="highlight">
         <h1 className="title">Why not play...</h1>
         <div id="highlight-description">
           <div id="game-text">
@@ -40,8 +39,17 @@ export const GameHighlight = () => {
           />
         )}
       </div>
-      {devFilter !== undefined && devFilter?.length > 0 && (
-        <PreviewSimilar title="More games from this developer" gameArr={devFilter} />
+      {devFilter !== undefined && devFilter.length > 0 && (
+        <PreviewSimilar
+          title="More games from this developer"
+          gameArr={Transform.shuffle(devFilter)}
+        />
+      )}
+      {genreFilter !== undefined && genreFilter.length > 0 && (
+        <PreviewSimilar
+          title="Games with similar genres"
+          gameArr={Transform.shuffle(genreFilter)}
+        />
       )}
     </div>
   );

@@ -56,7 +56,6 @@ nav .links-container {
 /* Library Styles */
 
 #library {
-  background-color: rgb(38, 64, 120);
   padding-bottom: 5rem;
 }
 
@@ -283,4 +282,69 @@ nav .links-container {
   background-color: rgb(32, 156, 238);
 }
 
+.container .preview-container {
+  background-color: rgb(38, 64, 120);
+  margin-top: 3rem;
+}
 
+#preview-title {
+  margin-top: -2rem;
+  padding: 0.5rem 1rem;
+}
+
+.preview-container .preview-card-container {
+  display: flex;
+  justify-content: space-evenly;
+  flex-wrap: wrap;
+}
+
+.preview-card-container .preview-card {
+  width: 20%;
+  height: 22rem;
+  margin: 0.75rem 0.5rem;
+}
+
+.preview-card-container .preview-card .title {
+  font-size: 0.5rem;
+}
+
+.preview-card .img-container img {
+  border-radius: 10px;
+}
+
+.preview-container .preview-card:hover {
+  background-color: rgb(53, 204, 255);
+}
+
+/* SignIn Styles */
+.form-container {
+  padding: 0 25%;
+  margin: 2rem 0;
+}
+
+.form-container .nes-container.is-rounded.with-title>.title{
+  margin-top: -2rem;
+  padding: 0.5rem 1rem;
+  margin-bottom: 0;
+}
+
+.form-container form:hover {
+  background-color: rgb(53, 204, 255);
+}
+
+#sign-in .form-container form div{
+  text-align: left;
+}
+
+#sign-in .form-container form label {
+  font-size: 1rem;
+  text-transform: uppercase;
+  padding-top: 1rem;
+}
+
+form .nes-btn {
+  margin-top: 1rem;
+  text-transform: uppercase;
+}
+
+/* SuggestionPage Styles */

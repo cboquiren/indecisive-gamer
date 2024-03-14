@@ -23,8 +23,8 @@ export const Library = () => {
       : userAvailG;
 
   return (
-    <div className="container page-container">
-      <div className="nes-container is-rounded with-title is-centered" id="library">
+    <div className="container">
+      <div className="nes-container is-rounded with-title is-centered blue-bg" id="library">
         <h1 className="title">Game Library</h1>
         {user && (
           <nav className="nes-container is-rounded" id="library-nav">

@@ -7,7 +7,7 @@ import { UserProvider } from "./Providers/UsersProvider";
 import { Library } from "./Pages/library";
 import { GameHighlight } from "./Pages/gameHighlight";
 import { SignIn } from "./Pages/signIn";
-import { SuggestionPage } from "./Pages/suggestionForm";
+import { SuggestionPage } from "./Pages/suggestionPage";
 import { Routes, Route } from "react-router-dom";
 
 function App() {

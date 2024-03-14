@@ -1,16 +1,15 @@
-import { CreateUser } from "../Components/Account Components/CreateUser";
-import { Login } from "../Components/Account Components/Login";
+import { AccountForm } from "../Components/Account Components/AccountForm";
+import { useUser } from "../Providers/UsersProvider";
 
 export const SignIn = () => {
+  const { userLogin, verifyNewUser } = useUser();
   return (
-    <div>
-      <h1>This is the Sign In Page</h1>
-      <p>Where users can sign in or create an account </p>
-      <CreateUser />
-      <br />
-      <br />
-      <br />
-      <Login />
+    <div className="container">
+      <div className="nes-container is-rounded with-title is-centered blue-bg" id="sign-in">
+        <h1 className="title">Account Page</h1>
+        <AccountForm label="New User" buttonLabel="Create Account" formAction={verifyNewUser} />
+        <AccountForm label="Previous User" buttonLabel="Login" formAction={userLogin} />
+      </div>
     </div>
   );
 };

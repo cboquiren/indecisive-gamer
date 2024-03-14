@@ -6,6 +6,7 @@ import { CheckboxInput } from "./SFCheckbox";
 import { useUser } from "../../Providers/UsersProvider";
 import { useGames } from "../../Providers/GamesProvider";
 import { makeSuggestion } from "./suggestionFormLogic";
+import { useNavigate } from "react-router";
 
 export const SuggestionForm = () => {
   const [selectGenres, setSelectGenres] = useState<string[]>([]);
@@ -21,6 +22,7 @@ export const SuggestionForm = () => {
   const { user } = useUser();
   const { allGamesRaw } = useGames();
   const { userGameArrs, setSelectedGame } = useSelected();
+  const navigate = useNavigate();
 
   const optionalFilterCheck =
     userGameArrs.favG.length > 0 &&
@@ -43,6 +45,7 @@ export const SuggestionForm = () => {
   return (
     <div>
       <form
+        className="nes-container is-rounded with-title"
         action=""
         onSubmit={(e) => {
           e.preventDefault();
@@ -62,9 +65,10 @@ export const SuggestionForm = () => {
               userGameArrs,
             })
           );
+          navigate("/game-highlight");
         }}
       >
-        <h2>What do you feel like playing today?</h2>
+        <h2 className="title">What do you feel like playing today?</h2>
         <div>
           <h4>Genre Selection</h4>
           {!showAllGenres &&

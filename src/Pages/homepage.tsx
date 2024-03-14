@@ -1,16 +1,12 @@
 import { useNavigate } from "react-router";
-import { CreateUser } from "../Components/Account Components/CreateUser";
-import { Login } from "../Components/Account Components/Login";
 import { useInteractions } from "../Providers/InteractionsProvider";
 import { useSelected } from "../Providers/SelectedProvider";
 import { useUser } from "../Providers/UsersProvider";
-import { GameCard } from "../Components/GameCard";
 
 export const Homepage = () => {
   const { selectedGame, selectRandom } = useSelected();
   const { user } = useUser();
   const { newInteraction, removeInteraction, userLogout } = useInteractions();
-  const { userGameArrs } = useSelected();
   const name = user ? user.username : "guest";
   const game = selectedGame ? selectedGame.name : "Please Login In";
   const navigate = useNavigate();
@@ -36,8 +32,6 @@ export const Homepage = () => {
         >
           Random
         </button>
-        <CreateUser />
-        <Login />
         <br />
         <br />
         <br />
@@ -76,7 +70,6 @@ export const Homepage = () => {
             </button>
           </div>
         )}
-        <GameCard game={userGameArrs.userAvailG[0]}></GameCard>
         <section className="icon-list">
           <i className="nes-icon coin"></i>
         </section>

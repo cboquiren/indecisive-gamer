@@ -679,12 +679,6 @@
       "userId": "0"
     },
     {
-      "id": "fe94",
-      "gameId": 10,
-      "type": "favorite",
-      "userId": "0"
-    },
-    {
       "id": "f676",
       "gameId": 12,
       "type": "owned",
@@ -694,6 +688,36 @@
       "id": "ce03",
       "gameId": 14,
       "type": "played",
+      "userId": "0"
+    },
+    {
+      "id": "a8aa",
+      "gameId": 13,
+      "type": "played",
+      "userId": "0"
+    },
+    {
+      "id": "f874",
+      "gameId": 21,
+      "type": "played",
+      "userId": "0"
+    },
+    {
+      "id": "c007",
+      "gameId": 27,
+      "type": "favorite",
+      "userId": "0"
+    },
+    {
+      "id": "0022",
+      "gameId": 9,
+      "type": "hidden",
+      "userId": "0"
+    },
+    {
+      "id": "4d68",
+      "gameId": 11,
+      "type": "hidden",
       "userId": "0"
     }
   ]

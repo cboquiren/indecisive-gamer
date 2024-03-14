@@ -30,6 +30,10 @@ img {
   background-color: white;
 }
 
+.container .blue-bg {
+  background-color: rgb(38, 64, 120);
+}
+
 .nes-container {
   background-color: white;
 }

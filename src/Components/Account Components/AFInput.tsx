@@ -10,8 +10,8 @@ export const AFInputContainer = ({
 }) => {
   return (
     <div className={`${label}-container`}>
-      <label htmlFor={label}>{Transform.capitalize(label)}</label>
-      <input type="text" id={label} {...inputProps} />
+      <label htmlFor={label}>{`${Transform.capitalize(label)}: `}</label>
+      <input type="text" className="nes-input" id={label} {...inputProps} />
     </div>
   );
 };

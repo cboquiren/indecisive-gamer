@@ -23,8 +23,9 @@ export const AccountForm = ({
   };
 
   return (
-    <div>
+    <div className="form-container">
       <form
+        className="nes-container with-title is-rounded"
         onSubmit={(e) => {
           e.preventDefault();
           if (!verified) {
@@ -37,7 +38,7 @@ export const AccountForm = ({
           }
         }}
       >
-        <h2>{label}</h2>
+        <h2 className="title">{label}</h2>
         <AFInputContainer
           label="username"
           inputProps={{
@@ -52,7 +53,9 @@ export const AccountForm = ({
             onChange: (e) => setPasswordInput(e.target.value.trim()),
           }}
         />
-        <button type="submit">{buttonLabel}</button>
+        <button type="submit" className="nes-btn is-warning">
+          {buttonLabel}
+        </button>
       </form>
     </div>
   );
