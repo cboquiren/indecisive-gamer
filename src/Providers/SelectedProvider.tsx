@@ -1,4 +1,12 @@
-import { Dispatch, ReactNode, SetStateAction, createContext, useContext, useState } from "react";
+import {
+  Dispatch,
+  ReactNode,
+  SetStateAction,
+  createContext,
+  useContext,
+  useEffect,
+  useState,
+} from "react";
 import { TGame, TUserGameArrs } from "../Assets/types";
 import { useGames } from "./GamesProvider";
 import { useInteractions } from "./InteractionsProvider";
@@ -30,6 +38,10 @@ export const SelectedProvider = ({ children }: { children: ReactNode }) => {
   const selectRandom = () => {
     setSelectedGame(userAvailableGames[numberGenerator(userAvailableGames.length)]);
   };
+
+  useEffect(() => {
+    selectRandom();
+  }, [allGamesRaw]);
 
   const filterGames = (type: "favs" | "played" | "owned" | "hidden") => {
     return allGamesRaw.filter((game) => {

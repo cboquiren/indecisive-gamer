@@ -16,6 +16,10 @@ ul, p, h1, h2, h3, h4, h5 {
   list-style: none;
 }
 
+label {
+  margin-bottom: 0;
+}
+
 img {
   max-width: 100%;
   max-height: 100%;
@@ -48,6 +52,14 @@ img {
 .nes-container.is-rounded.with-title.is-centered>.title {
   padding: 1rem;
   margin-top: -2rem
+}
+
+.nes-checkbox+span::before {
+  top: -5px;
+}
+
+.nes-radio:checked+span::before {
+  top: -4px;
 }
 
 @media (min-resolution: 0.001dpcm) and (-webkit-min-device-pixel-ratio: 0) {

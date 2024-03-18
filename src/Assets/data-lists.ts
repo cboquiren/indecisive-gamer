@@ -62,3 +62,13 @@ export const pixelLogos = [
   "snes-logo",
   "snes-jp-logo"
 ]
+
+export const characters = [
+  "nes-octocat animate",
+  "nes-mario",
+  "nes-ash",
+  "nes-bulbasaur",
+  "nes-charmander",
+  "nes-squirtle",
+  "nes-kirby"
+]

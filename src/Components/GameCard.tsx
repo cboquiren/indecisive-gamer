@@ -20,7 +20,7 @@ export const GameCard = ({ game }: { game: TGame }) => {
       >
         <h1 className="title card-title">{game?.name}</h1>
         <div className="box-art-container">
-          <img src={game?.image} alt={`${game?.name} Box Art`} />
+          <img loading="lazy" src={game?.image} alt={`${game?.name} Box Art`} />
         </div>
       </div>
       <div className="nes-container" id="interaction-container">

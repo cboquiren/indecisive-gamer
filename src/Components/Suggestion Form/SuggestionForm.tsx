@@ -46,6 +46,7 @@ export const SuggestionForm = () => {
     <div>
       <form
         className="nes-container is-rounded with-title"
+        id="suggestion-form"
         action=""
         onSubmit={(e) => {
           e.preventDefault();
@@ -69,43 +70,46 @@ export const SuggestionForm = () => {
         }}
       >
         <h2 className="title">What do you feel like playing today?</h2>
-        <div>
-          <h4>Genre Selection</h4>
-          {!showAllGenres &&
-            genresList.slice(0, 7).map((genre, i) => {
-              return (
-                <GenreSelect
-                  genre={genre}
-                  key={i}
-                  selectGenres={selectGenres}
-                  setSelectGenres={(data) => setSelectGenres(data)}
-                />
-              );
-            })}
-          {showAllGenres &&
-            genresList.map((genre, i) => {
-              return (
-                <GenreSelect
-                  genre={genre}
-                  key={i}
-                  selectGenres={selectGenres}
-                  setSelectGenres={(data) => setSelectGenres(data)}
-                />
-              );
-            })}
+        <div className="nes-container with-title is-rounded" id="genre-select">
+          <h4>Genre Selection:</h4>
+          <div id="select-container">
+            {!showAllGenres &&
+              genresList.slice(0, 7).map((genre, i) => {
+                return (
+                  <GenreSelect
+                    genre={genre}
+                    key={i}
+                    selectGenres={selectGenres}
+                    setSelectGenres={(data) => setSelectGenres(data)}
+                  />
+                );
+              })}
+            {showAllGenres &&
+              genresList.map((genre, i) => {
+                return (
+                  <GenreSelect
+                    genre={genre}
+                    key={i}
+                    selectGenres={selectGenres}
+                    setSelectGenres={(data) => setSelectGenres(data)}
+                  />
+                );
+              })}
+          </div>
           <div
             onClick={() => {
               showAllGenres ? setShowAllGenres(false) : setShowAllGenres(true);
             }}
+            className="nes-btn is-warning"
           >
-            {showAllGenres ? <p>Show Less</p> : <p>Show More</p>}
+            <p>{showAllGenres ? "Show Less" : "Show More"}</p>
           </div>
         </div>
-        <div>
-          <h4>Developer Selection</h4>
-          <label htmlFor="developer">From this Developer: </label>
+        <div className="nes-container is-rounded" id="developer-select">
+          <h4>Developer Selection:</h4>
           <select
             name="developer"
+            className="nes-select nes-pointer"
             id="developer"
             key="developer"
             value={selectedDev}
@@ -122,80 +126,91 @@ export const SuggestionForm = () => {
             })}
           </select>
         </div>
-        <div>
-          <h4>Platform Section</h4>
-          {platformsList.map((platform) => {
-            return (
-              <div key={platform}>
-                <input
-                  type="radio"
-                  id={platform}
-                  name="Platform"
-                  value={platform}
-                  checked={selectPlatform === platform}
-                  onChange={() => {
-                    setSelectPlatform(platform);
-                  }}
-                ></input>
-                <label htmlFor={platform}>{platform}</label>
-              </div>
-            );
-          })}
+        <div className="nes-container is-rounded" id="platform-select">
+          <h4>Platform Section:</h4>
+          <div className="platform-container">
+            {platformsList.map((platform) => {
+              return (
+                <div className="platform-option" key={platform}>
+                  <label htmlFor={platform}>
+                    <input
+                      type="radio"
+                      id={platform}
+                      className="nes-radio"
+                      name="Platform"
+                      value={platform}
+                      checked={selectPlatform === platform}
+                      onChange={() => {
+                        setSelectPlatform(platform);
+                      }}
+                    ></input>
+                    <span>{platform}</span>
+                  </label>
+                </div>
+              );
+            })}
+          </div>
         </div>
         {user && optionalFilterCheck && (
-          <div>
-            <h4>Optional Filters</h4>
-            {userGameArrs.hiddenG.length > 0 && (
-              <CheckboxInput
-                filter="hidden"
-                label="Allow Hidden Games"
-                state={allowHidden}
-                stateChange={(data) => setAllowHidden(data)}
-                key={"hidden"}
-              />
-            )}
-            {userGameArrs.playedG.length > 0 && !playedOnly && (
-              <CheckboxInput
-                filter="new"
-                label="Never Played Games Only"
-                state={newOnly}
-                stateChange={(data) => setNewOnly(data)}
-                key={"new"}
-              />
-            )}
-            {userGameArrs.ownedG.length > 0 && (
-              <CheckboxInput
-                filter="owned"
-                label="Owned Games Only"
-                state={ownedOnly}
-                stateChange={(data) => setOwnedOnly(data)}
-                key={"owned"}
-              />
-            )}
-            {userGameArrs.playedG.length > 0 && !newOnly && (
-              <CheckboxInput
-                filter="played"
-                label="Previously Played Games Only"
-                state={playedOnly}
-                stateChange={(data) => setPlayedOnly(data)}
-                key={"played"}
-              />
-            )}
-            {userGameArrs.favG.length > 0 && (
-              <CheckboxInput
-                filter="favs"
-                label="Liked Games Only"
-                state={favOnly}
-                stateChange={(data) => setFavOnly(data)}
-                key={"favs"}
-              />
-            )}
+          <div className="nes-container is-rounded" id="optional">
+            <h4>Optional Filters:</h4>
+            <div className="optional-container">
+              {userGameArrs.hiddenG.length > 0 && (
+                <CheckboxInput
+                  filter="hidden"
+                  label="Allow Hidden Games"
+                  state={allowHidden}
+                  stateChange={(data) => setAllowHidden(data)}
+                  key={"hidden"}
+                />
+              )}
+              {userGameArrs.playedG.length > 0 && !playedOnly && (
+                <CheckboxInput
+                  filter="new"
+                  label="Never Played Games Only"
+                  state={newOnly}
+                  stateChange={(data) => setNewOnly(data)}
+                  key={"new"}
+                />
+              )}
+              {userGameArrs.ownedG.length > 0 && (
+                <CheckboxInput
+                  filter="owned"
+                  label="Owned Games Only"
+                  state={ownedOnly}
+                  stateChange={(data) => setOwnedOnly(data)}
+                  key={"owned"}
+                />
+              )}
+              {userGameArrs.playedG.length > 0 && !newOnly && (
+                <CheckboxInput
+                  filter="played"
+                  label="Previously Played Games Only"
+                  state={playedOnly}
+                  stateChange={(data) => setPlayedOnly(data)}
+                  key={"played"}
+                />
+              )}
+              {userGameArrs.favG.length > 0 && (
+                <CheckboxInput
+                  filter="favs"
+                  label="Liked Games Only"
+                  state={favOnly}
+                  stateChange={(data) => setFavOnly(data)}
+                  key={"favs"}
+                />
+              )}
+            </div>
           </div>
         )}
-        <button type="submit">Submit</button>
-        <button type="reset" onClick={() => reset()}>
-          Reset
-        </button>
+        <div className="suggestion-btns">
+          <button type="submit" className="nes-btn is-success" id="submit">
+            Submit
+          </button>
+          <button type="reset" className="nes-btn is-error" onClick={() => reset()} id="reset">
+            Reset
+          </button>
+        </div>
       </form>
     </div>
   );
