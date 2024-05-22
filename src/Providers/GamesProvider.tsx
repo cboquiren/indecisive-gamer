@@ -9,6 +9,7 @@ import {
 } from "react";
 import { TGame } from "../Assets/types";
 import { gamesRequests } from "../Requests/requestGames";
+import { useUser } from "./UsersProvider";
 
 type TGamesContext = {
   allGamesRaw: TGame[];
@@ -19,14 +20,15 @@ const GamesContext = createContext<TGamesContext | undefined>(undefined);
 
 export const GamesProvider = ({ children }: { children: ReactNode }) => {
   const [allGamesRaw, setAllGamesRaw] = useState<TGame[]>([]);
+  const { user } = useUser();
 
   const requestAllGamesRaw = () => {
-    return gamesRequests.requestGames().then(setAllGamesRaw);
+    return gamesRequests.requestGames(user).then(setAllGamesRaw);
   };
 
   useEffect(() => {
     requestAllGamesRaw();
-  }, []);
+  }, [user]);
 
   return (
     <GamesContext.Provider value={{ allGamesRaw, setAllGamesRaw }}>
