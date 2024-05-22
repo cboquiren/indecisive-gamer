@@ -13,7 +13,7 @@ export const UserBtn = () => {
       {user && (
         <div id="user-nav">
           <div className="nes-badge" id="user-name">
-            <span className="is-success">{`Welcome Back`}</span>
+            <span className="is-success">{`Welcome Back!`}</span>
             <div className="logout-container nes-pointer">
               <div className="nes-badge" id="logout">
                 <span

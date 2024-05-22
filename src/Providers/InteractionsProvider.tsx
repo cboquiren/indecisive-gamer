@@ -16,8 +16,12 @@ type TInteractionContext = {
   userInteractions: TInteraction[];
   setUserInteractions: Dispatch<SetStateAction<TInteraction[]>>;
   userDataArrs: TUserDataArr;
-  newInteraction: (data: Omit<TInteraction, "id">) => Promise<TInteraction>;
-  removeInteraction: (data: Omit<TInteraction, "id">) => Promise<TInteraction>;
+  newInteraction: (
+    data: Omit<TInteraction, "id" | "userId">
+  ) => Promise<TInteraction>;
+  removeInteraction: (
+    data: Omit<TInteraction, "id" | "userId">
+  ) => Promise<TInteraction>;
   userLogout: () => void;
 };
 
@@ -28,23 +32,25 @@ type TUserDataArr = {
   hidden: TInteraction[];
 };
 
-const InteractionContext = createContext<TInteractionContext | undefined>(undefined);
+const InteractionContext = createContext<TInteractionContext | undefined>(
+  undefined
+);
 
 export const InteractionsProvider = ({ children }: { children: ReactNode }) => {
   const [userInteractions, setUserInteractions] = useState<TInteraction[]>([]);
   const { user, setUser } = useUser();
 
-  const fetchUserInteractions = () => {
-    return interactionsRequests.requestInteractions().then((response: TInteraction[]) => {
-      if (user) {
-        const filterUser = response.filter((interaction) => interaction.userId === user.id);
-        setUserInteractions(filterUser);
-      }
+  const fetchUserInteractions = (user: string | null) => {
+    if (user === null) {
+      return setUserInteractions([]);
+    }
+    return interactionsRequests.requestInteractions(user).then((data) => {
+      return setUserInteractions(data);
     });
   };
 
   useEffect(() => {
-    fetchUserInteractions();
+    fetchUserInteractions(user);
   }, [user]);
 
   const filterInteractions = (type: string) => {
@@ -60,35 +66,45 @@ export const InteractionsProvider = ({ children }: { children: ReactNode }) => {
     hidden: filterInteractions("hidden"),
   };
 
-  const newInteraction = (data: Omit<TInteraction, "id">) => {
+  const newInteraction = (data: Omit<TInteraction, "id" | "userId">) => {
     if (!user) {
       toast.error("Please Log In!");
       throw new Error("No user found.");
     }
-    return interactionsRequests.createInteraction(data).then((interaction: TInteraction) => {
-      toast.success(`Successfully added to your ${interaction.type} games library!`);
-      fetchUserInteractions();
-      return interaction;
-    });
+    return interactionsRequests
+      .createInteraction(user, data)
+      .then((interaction: TInteraction) => {
+        toast.success(
+          `Successfully added to your ${interaction.type} games library!`
+        );
+        fetchUserInteractions(user);
+        return interaction;
+      });
   };
 
-  const removeInteraction = (data: Omit<TInteraction, "id">) => {
+  const removeInteraction = (data: Omit<TInteraction, "id" | "userId">) => {
     if (!user) {
       toast.error("Please Log In!");
       throw new Error("No user found.");
     }
     const findId = userInteractions.find((interaction) => {
-      return interaction.gameId === data.gameId && interaction.type === data.type;
+      return (
+        interaction.gameId === data.gameId && interaction.type === data.type
+      );
     });
     if (!findId) {
       toast.error("Please reload the page");
       throw new Error("No interaction found.");
     }
-    return interactionsRequests.deleteInteraction(findId.id).then((interaction: TInteraction) => {
-      toast.success(`Successfully removed from your ${interaction.type} games library!`);
-      fetchUserInteractions();
-      return interaction;
-    });
+    return interactionsRequests
+      .deleteInteraction(user, findId.id)
+      .then((interaction: TInteraction) => {
+        toast.success(
+          `Successfully removed from your ${interaction.type} games library!`
+        );
+        fetchUserInteractions(user);
+        return interaction;
+      });
   };
 
   const userLogout = () => {
@@ -116,7 +132,9 @@ export const InteractionsProvider = ({ children }: { children: ReactNode }) => {
 export const useInteractions = () => {
   const context = useContext(InteractionContext);
   if (!context) {
-    throw new Error("Please use 'useInteractions' hook within InteractionContext scope.");
+    throw new Error(
+      "Please use 'useInteractions' hook within InteractionContext scope."
+    );
   }
   return context;
 };

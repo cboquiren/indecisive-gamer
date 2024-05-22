@@ -38,7 +38,9 @@ export const InteractionBtn = ({
           <div className={`nes-balloon from-${direction}`}>
             <p>Please Login</p>
           </div>
-          <i className={`nes-icon ${isClassArr ? className[0] : className}`}></i>
+          <i
+            className={`nes-icon ${isClassArr ? className[0] : className}`}
+          ></i>
         </div>
       )}
       {user && !gameArr.includes(game) && (
@@ -49,7 +51,7 @@ export const InteractionBtn = ({
           <i
             className={`nes-icon ${isClassArr ? className[1] : className}`}
             onClick={() => {
-              newInteraction({ gameId: Number(game.id), type: interaction, userId: user.id });
+              newInteraction({ gameId: Number(game.id), type: interaction });
             }}
           ></i>
         </div>
@@ -62,7 +64,10 @@ export const InteractionBtn = ({
           <i
             className={`nes-icon ${isClassArr ? className[2] : className}`}
             onClick={() => {
-              removeInteraction({ gameId: Number(game.id), type: interaction, userId: user.id });
+              removeInteraction({
+                gameId: Number(game.id),
+                type: interaction,
+              });
             }}
           ></i>
         </div>
