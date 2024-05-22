@@ -5,44 +5,38 @@ import toast from "react-hot-toast";
 import { useNavigate } from "react-router";
 
 type TUserContext = {
-  user: TUser | null;
-  setUser: Dispatch<SetStateAction<TUser | null>>;
-  userLogin: (user: Omit<TUser, "id">) => Promise<TUser>;
-  verifyNewUser: (user: Omit<TUser, "id">) => Promise<TUser>;
+  user: string | null;
+  setUser: Dispatch<SetStateAction<string | null>>;
+  userLogin: (user: Omit<TUser, "id">) => Promise<string>;
+  createUser: (user: Omit<TUser, "id">) => Promise<string>;
 };
 
 const UserContext = createContext<TUserContext | undefined>(undefined);
 
 export const UserProvider = ({ children }: { children: ReactNode }) => {
-  const [user, setUser] = useState<TUser | null>(null);
+  const [user, setUser] = useState<string | null>(null);
   const navigate = useNavigate();
 
   const userLogin = (user: Omit<TUser, "id">) => {
     return userRequests.findUser(user).then((verifiedUser) => {
       setUser(verifiedUser);
-      toast.success(`Welcome Back ${verifiedUser.username}!`);
+      toast.success(`Welcome Back!`);
       navigate("/library");
       return verifiedUser;
     });
   };
 
   const createUser = (user: Omit<TUser, "id">) => {
-    return userRequests.createUser(user).then((newUser: TUser) => {
+    return userRequests.createUser(user).then((newUser) => {
       setUser(newUser);
-      toast.success(`Welcome ${newUser.username}!`);
+      toast.success(`Welcome!`);
       navigate("/library");
       return newUser;
     });
   };
 
-  const verifyNewUser = (user: Omit<TUser, "id">) => {
-    return userRequests.checkUsername(user.username).then(() => {
-      return createUser(user);
-    });
-  };
-
   return (
-    <UserContext.Provider value={{ user, setUser, userLogin, verifyNewUser }}>
+    <UserContext.Provider value={{ user, setUser, userLogin, createUser }}>
       {children}
     </UserContext.Provider>
   );

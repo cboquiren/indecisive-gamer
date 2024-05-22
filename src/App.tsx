@@ -13,8 +13,8 @@ import { Routes, Route } from "react-router-dom";
 function App() {
   return (
     <>
-      <GamesProvider>
-        <UserProvider>
+      <UserProvider>
+        <GamesProvider>
           <InteractionsProvider>
             <SelectedProvider>
               <Navbar />
@@ -27,8 +27,8 @@ function App() {
               </Routes>
             </SelectedProvider>
           </InteractionsProvider>
-        </UserProvider>
-      </GamesProvider>
+        </GamesProvider>
+      </UserProvider>
     </>
   );
 }

@@ -40,7 +40,7 @@ export const GameCard = ({ game }: { game: TGame }) => {
           game={game}
           gameArr={ownedG}
           className={"coin"}
-          labelArr={["I Own This Game", "I Don't Own This Game"]}
+          labelArr={["Click To Show As Owned", "Click To Show As Unowned"]}
         />
         <InteractionBtn
           label="play"
@@ -49,7 +49,7 @@ export const GameCard = ({ game }: { game: TGame }) => {
           game={game}
           gameArr={playedG}
           className={"trophy"}
-          labelArr={["I've Played This Game", "I Have Not Played This Game"]}
+          labelArr={["Click To Show As Played", "Click To Show As Never Played"]}
         />
         <InteractionBtn
           label="like"
@@ -58,7 +58,7 @@ export const GameCard = ({ game }: { game: TGame }) => {
           game={game}
           gameArr={favG}
           className={["heart is-empty", "heart is-transparent", "heart"]}
-          labelArr={["Like This Game", "Unlike This Game"]}
+          labelArr={["Click To Show as Liked", "Click To Show As Not Liked"]}
         />
       </div>
     </div>

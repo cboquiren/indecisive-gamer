@@ -1,4 +1,3 @@
-import { Transform } from "../../Assets/transformations";
 import { useInteractions } from "../../Providers/InteractionsProvider";
 import { useUser } from "../../Providers/UsersProvider";
 import { useNavigate } from "react-router-dom";
@@ -14,7 +13,7 @@ export const UserBtn = () => {
       {user && (
         <div id="user-nav">
           <div className="nes-badge" id="user-name">
-            <span className="is-success">{`Hello ${Transform.capitalize(user.username)}`}</span>
+            <span className="is-success">{`Welcome Back`}</span>
             <div className="logout-container nes-pointer">
               <div className="nes-badge" id="logout">
                 <span

@@ -10,7 +10,7 @@ export const AccountForm = ({
 }: {
   label: string;
   buttonLabel: string;
-  formAction: (user: Omit<TUser, "id">) => Promise<TUser>;
+  formAction: (user: Omit<TUser, "id">) => Promise<string>;
 }) => {
   const [usernameInput, setUsernameInput] = useState<string | null>(null);
   const [passwordInput, setPasswordInput] = useState<string | null>(null);
