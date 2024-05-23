@@ -45,6 +45,7 @@ export const AccountForm = ({
             value: usernameInput === null ? "" : usernameInput,
             onChange: (e) => setUsernameInput(e.target.value.trim()),
           }}
+          type="text"
         />
         <AFInputContainer
           label="password"
@@ -52,6 +53,7 @@ export const AccountForm = ({
             value: passwordInput === null ? "" : passwordInput,
             onChange: (e) => setPasswordInput(e.target.value.trim()),
           }}
+          type="password"
         />
         <button type="submit" className="nes-btn is-warning">
           {buttonLabel}

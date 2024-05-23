@@ -6,11 +6,15 @@ nav {
   align-items: center;
 }
 
-#nav {margin: 1rem;}
+#nav {
+  margin: 1rem;
+}
 
-#user-nav {height: 3rem;}
+#user-nav {
+  height: 3rem;
+}
 
-#user-nav #user-name{
+#user-nav #user-name {
   width: 15rem;
   font-size: 1rem;
   position: relative;
@@ -23,10 +27,13 @@ nav {
   top: 2.5rem;
 }
 
-#user-nav:hover .logout-container { display: block;}
+#user-nav:hover .logout-container {
+  display: block;
+}
 
-#user-container .nes-btn {width: 15rem;}
-
+#user-container .nes-btn {
+  width: 15rem;
+}
 
 #title {
   font-size: 1.5rem;
@@ -34,7 +41,7 @@ nav {
 }
 
 #indecisive {
-  font-family: 'Gloria Halllelujah', cursive;
+  font-family: "Gloria Halllelujah", cursive;
   color: rgb(247, 213, 29);
   font-size: 1.7rem;
   letter-spacing: 2px;
@@ -46,7 +53,7 @@ nav .links-container {
   width: 30%;
 }
 
-.links-container .user-links{
+.links-container .user-links {
   font-size: 0.6rem;
   margin: 0 0.5rem;
   display: flex;
@@ -124,7 +131,7 @@ nav .links-container {
   padding: 1rem 1.5rem;
 }
 
-#hide .message, 
+#hide .message,
 #own .message,
 #play .message,
 #like .message {
@@ -158,18 +165,21 @@ nav .links-container {
 }
 
 #like-false .from-right {
-  top: -7rem;
-  left: -3rem;
+  top: -9.5rem;
+  left: -3.5rem;
 }
 
-#own-true .from-left,
+#own-true .from-left {
+  top: -8.25rem;
+}
+
 #play-true .from-right {
-  top: -9.1rem;
+  top: -10.5rem;
 }
 
 #like-true .from-right {
-  top: -7rem;
-  left: -4.5rem;
+  top: -10.5rem;
+  left: -3.5rem;
 }
 
 #close-disable .nes-icon.close::before {
@@ -197,9 +207,9 @@ nav .links-container {
   display: block;
 }
 
-
 /* Highlight Styles */
-#highlight, #homepage {
+#highlight,
+#homepage {
   background-color: rgb(0, 67, 165);
   user-select: none;
 }
@@ -223,7 +233,6 @@ nav .links-container {
   align-items: center;
   justify-content: space-between;
 }
-
 
 #game-text {
   padding-right: 1rem;
@@ -337,7 +346,7 @@ nav .links-container {
   margin: 2rem 0;
 }
 
-.form-container .nes-container.is-rounded.with-title>.title{
+.form-container .nes-container.is-rounded.with-title > .title {
   margin-top: -2rem;
   padding: 0.5rem 1rem;
   margin-bottom: 0;
@@ -347,7 +356,7 @@ nav .links-container {
   background-color: rgb(53, 204, 255);
 }
 
-#sign-in .form-container form div{
+#sign-in .form-container form div {
   text-align: left;
 }
 
@@ -363,7 +372,7 @@ form .nes-btn {
 }
 
 /* SuggestionPage Styles */
-#suggestion div .nes-container.is-rounded.with-title>.title {
+#suggestion div .nes-container.is-rounded.with-title > .title {
   margin-top: -2rem;
   padding: 0.5rem 1rem;
 }
@@ -396,7 +405,6 @@ form .nes-btn {
   padding: 0.5rem;
   margin: 0.5rem;
   border-radius: 15px;
-
 }
 
 #select-container .select-option:hover {
@@ -493,8 +501,8 @@ form .nes-btn {
   margin-bottom: 1rem;
 }
 
-#homepage h2>span>span {
-  font-family: 'Gloria Halllelujah', cursive;
+#homepage h2 > span > span {
+  font-family: "Gloria Halllelujah", cursive;
 }
 
 #homepage .icon-banner {

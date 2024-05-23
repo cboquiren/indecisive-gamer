@@ -66,9 +66,18 @@ export const SelectedProvider = ({ children }: { children: ReactNode }) => {
 
   const filterGenre = () => {
     if (selectedGame) {
-      const selectedGameGenres = selectedGame.genres.map((genre) => genre.name);
+      const selectedGameGenres =
+        selectedGame.genres?.map((genre) => genre.name) || [];
+      if (selectedGameGenres.length === 0) {
+        console.log("InvalidSelectedGameGenres");
+        console.log({ selectedGameGenres });
+      }
       const similarGames = userAvailableGames.filter((game) => {
-        const gameGenres = game.genres.map((genre) => genre.name);
+        if (!game.genres) {
+          console.log("Invalid Game Genres");
+          console.log(game);
+        }
+        const gameGenres = game.genres?.map((genre) => genre.name) ?? [];
         const findSameGenres = gameGenres.filter((genre) => {
           if (selectedGameGenres.includes(genre)) {
             return true;
@@ -79,13 +88,6 @@ export const SelectedProvider = ({ children }: { children: ReactNode }) => {
       return similarGames;
     }
   };
-
-  if (!selectedGame) {
-    console.log("no game selected");
-  }
-  if (selectedGame) {
-    console.log(selectedGame.genres.map((genre) => genre.name));
-  }
 
   const userGameArrs = {
     favG: filterGames("favs"),

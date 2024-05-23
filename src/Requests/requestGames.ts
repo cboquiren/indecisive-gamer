@@ -1,40 +1,39 @@
-import toast from "react-hot-toast";
-import { TGame } from "../Assets/types";
+import { z } from "zod";
 
 const base_games_URL = "http://localhost:3000/games";
 
-const requestGames = (user: string | null) => {
-  if (user === null) {
-    return fetch(base_games_URL)
-      .then((response) => {
-        if (!response.ok) {
-          toast.error(
-            "All our games are in the wrong case, please try again in a few moments."
-          );
-          throw new Error("Could not reach the server.");
-        }
-        return response.json();
-      })
-      .then((data: { games: TGame[] }) => {
-        return data.games;
-      });
+const gameSchema = z.object({
+  id: z.number(),
+  name: z.string(),
+  description: z.string(),
+  image: z.string(),
+  postedBy: z.number(),
+  developerId: z.number(),
+  developer: z.object({
+    id: z.number(),
+    name: z.string(),
+  }),
+  genres: z.array(z.object({ id: z.number(), name: z.string() })),
+  platforms: z.array(z.object({ id: z.number(), name: z.string() })),
+});
+
+const requestGames = (token: string | null) => {
+  const headers: Record<string, string> = {};
+  if (token) {
+    headers["Authorization"] = token;
   }
+
   return fetch(base_games_URL, {
-    headers: {
-      "Authorization": user,
-    },
+    headers,
   })
     .then((response) => {
       if (!response.ok) {
-        toast.error(
-          "All our games are in the wrong case, please try again in a few moments."
-        );
         throw new Error("Could not reach the server.");
       }
       return response.json();
     })
-    .then((data: { games: TGame[] }) => {
-      return data.games;
+    .then((data) => {
+      return z.array(gameSchema).parse(data.games);
     });
 };
 

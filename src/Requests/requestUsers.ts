@@ -1,4 +1,3 @@
-import toast from "react-hot-toast";
 import { TUser } from "../Assets/types";
 
 const AUTH_URL = "http://localhost:3000/auth";
@@ -13,11 +12,9 @@ const findUser = (user: Omit<TUser, "id">) => {
   })
     .then((response) => {
       if (response.status === 404) {
-        toast.error("User Not Found");
         throw new Error("User Not Found");
       }
       if (response.status === 401) {
-        toast.error("Username and Password Do Not Match!");
         throw new Error("Username and Password Do Not Match!");
       }
       return response.json();
@@ -37,7 +34,6 @@ const createUser = (user: Omit<TUser, "id">) => {
   })
     .then((response) => {
       if (response.status === 403) {
-        toast.error("That Username Is Taken!");
         throw new Error("Username Taken");
       }
       return response.json();

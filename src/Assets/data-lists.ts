@@ -51,7 +51,7 @@ export const platformsList = [
   "PC",
   "Mobile",
   "Xbox",
-  "PlayStation",
+  "Playstation",
   "Switch",
 ];
 
