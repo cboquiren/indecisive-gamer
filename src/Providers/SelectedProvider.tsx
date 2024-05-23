@@ -10,7 +10,6 @@ import {
 import { TGame, TUserGameArrs } from "../Assets/types";
 import { useGames } from "./GamesProvider";
 import { useInteractions } from "./InteractionsProvider";
-import { genresList } from "../Assets/data-lists";
 
 type TSelectedContext = {
   selectedGame: TGame | null | undefined;
@@ -22,7 +21,9 @@ type TSelectedContext = {
 const SelectedContext = createContext<TSelectedContext | undefined>(undefined);
 
 export const SelectedProvider = ({ children }: { children: ReactNode }) => {
-  const [selectedGame, setSelectedGame] = useState<TGame | null | undefined>(null);
+  const [selectedGame, setSelectedGame] = useState<TGame | null | undefined>(
+    null
+  );
   const { allGamesRaw } = useGames();
   const { userDataArrs } = useInteractions();
 
@@ -36,7 +37,9 @@ export const SelectedProvider = ({ children }: { children: ReactNode }) => {
   });
 
   const selectRandom = () => {
-    setSelectedGame(userAvailableGames[numberGenerator(userAvailableGames.length)]);
+    setSelectedGame(
+      userAvailableGames[numberGenerator(userAvailableGames.length)]
+    );
   };
 
   useEffect(() => {
@@ -53,7 +56,7 @@ export const SelectedProvider = ({ children }: { children: ReactNode }) => {
   const filterDev = () => {
     if (selectedGame) {
       const allDevG = userAvailableGames.filter(
-        (game) => game.developer === selectedGame.developer
+        (game) => game.developerId === selectedGame.developerId
       );
       return allDevG.filter((game) => {
         return game.id !== selectedGame.id;
@@ -63,21 +66,17 @@ export const SelectedProvider = ({ children }: { children: ReactNode }) => {
 
   const filterGenre = () => {
     if (selectedGame) {
-      const gameGenres = Object.values(selectedGame).filter((value) => {
-        if (typeof value === "string") {
-          return genresList.includes(value);
-        }
-      });
-      const similarGenres = userAvailableGames.filter((game) => {
-        const sameGen = Object.values(game).filter((value) => {
-          if (typeof value === "string") {
-            return gameGenres.includes(value);
+      const selectedGameGenres = selectedGame.genres.map((genre) => genre.name);
+      const similarGames = userAvailableGames.filter((game) => {
+        const gameGenres = game.genres.map((genre) => genre.name);
+        const findSameGenres = gameGenres.filter((genre) => {
+          if (selectedGameGenres.includes(genre)) {
+            return true;
           }
         });
-        return sameGen.length > 0;
+        return findSameGenres.length > 0;
       });
-
-      return similarGenres;
+      return similarGames;
     }
   };
 
@@ -91,8 +90,12 @@ export const SelectedProvider = ({ children }: { children: ReactNode }) => {
     genreFilter: filterGenre(),
   };
 
+  console.log(selectedGame);
+
   return (
-    <SelectedContext.Provider value={{ selectedGame, setSelectedGame, selectRandom, userGameArrs }}>
+    <SelectedContext.Provider
+      value={{ selectedGame, setSelectedGame, selectRandom, userGameArrs }}
+    >
       {children}
     </SelectedContext.Provider>
   );
@@ -101,7 +104,9 @@ export const SelectedProvider = ({ children }: { children: ReactNode }) => {
 export const useSelected = () => {
   const context = useContext(SelectedContext);
   if (!context) {
-    throw new Error("Please use 'useSelected' hook within SelectedContext scope.");
+    throw new Error(
+      "Please use 'useSelected' hook within SelectedContext scope."
+    );
   }
   return context;
 };

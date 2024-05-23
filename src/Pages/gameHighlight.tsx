@@ -1,4 +1,3 @@
-import { genresList, platformsList } from "../Assets/data-lists";
 import { Transform } from "../Assets/transformations";
 import { EmptyResult } from "../Components/emptyResult";
 import { PreviewSimilar } from "../Components/previewSimilar";
@@ -14,16 +13,20 @@ export const GameHighlight = () => {
       {selectedGame === null || selectedGame === undefined ? (
         <EmptyResult />
       ) : (
-        <div className="nes-container is-rounded with-title is-centered blue-bg" id="highlight">
+        <div
+          className="nes-container is-rounded with-title is-centered blue-bg"
+          id="highlight"
+        >
           <h1 className="title">Why not play...</h1>
           <div id="highlight-description">
             <div id="game-text">
               <h3 className="nes-text is-success">{selectedGame?.name}</h3>
-              <h5 className="nes-text is-warning">By: {selectedGame?.developer}</h5>
+              <h5 className="nes-text is-warning">
+                By: {selectedGame.developer.name}
+              </h5>
               <p>{selectedGame?.description}</p>
               {selectedGame !== null && selectedGame !== undefined && (
                 <Tags
-                  dataArr={genresList}
                   game={selectedGame}
                   label="genre"
                   key={`${selectedGame}-genres`}
@@ -31,12 +34,14 @@ export const GameHighlight = () => {
               )}
             </div>
             <div id="game-image-container">
-              <img src={selectedGame?.image} alt={`${selectedGame?.name} box art`} />
+              <img
+                src={selectedGame?.image}
+                alt={`${selectedGame?.name} box art`}
+              />
             </div>
           </div>
           {selectedGame !== null && selectedGame !== undefined && (
             <Tags
-              dataArr={platformsList}
               game={selectedGame}
               label="platform"
               key={`${selectedGame}-platforms`}
