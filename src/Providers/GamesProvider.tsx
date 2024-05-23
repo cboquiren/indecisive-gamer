@@ -30,8 +30,6 @@ export const GamesProvider = ({ children }: { children: ReactNode }) => {
     requestAllGamesRaw();
   }, [user]);
 
-  console.log(allGamesRaw);
-
   return (
     <GamesContext.Provider value={{ allGamesRaw, setAllGamesRaw }}>
       {children}

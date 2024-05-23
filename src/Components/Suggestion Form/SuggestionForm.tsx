@@ -1,6 +1,10 @@
 import { useState } from "react";
 import { useSelected } from "../../Providers/SelectedProvider";
-import { developersList, genresList, platformsList } from "../../Assets/data-lists";
+import {
+  developersList,
+  genresList,
+  platformsList,
+} from "../../Assets/data-lists";
 import { GenreSelect } from "./genreSelect";
 import { CheckboxInput } from "./SFCheckbox";
 import { useUser } from "../../Providers/UsersProvider";
@@ -74,7 +78,7 @@ export const SuggestionForm = () => {
           <h4>Genre Selection:</h4>
           <div id="select-container">
             {!showAllGenres &&
-              genresList.slice(0, 7).map((genre, i) => {
+              genresList.slice(0, 11).map((genre, i) => {
                 return (
                   <GenreSelect
                     genre={genre}
@@ -207,7 +211,12 @@ export const SuggestionForm = () => {
           <button type="submit" className="nes-btn is-success" id="submit">
             Submit
           </button>
-          <button type="reset" className="nes-btn is-error" onClick={() => reset()} id="reset">
+          <button
+            type="reset"
+            className="nes-btn is-error"
+            onClick={() => reset()}
+            id="reset"
+          >
             Reset
           </button>
         </div>

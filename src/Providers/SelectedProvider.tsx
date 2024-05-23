@@ -80,6 +80,13 @@ export const SelectedProvider = ({ children }: { children: ReactNode }) => {
     }
   };
 
+  if (!selectedGame) {
+    console.log("no game selected");
+  }
+  if (selectedGame) {
+    console.log(selectedGame.genres.map((genre) => genre.name));
+  }
+
   const userGameArrs = {
     favG: filterGames("favs"),
     playedG: filterGames("played"),
@@ -89,8 +96,6 @@ export const SelectedProvider = ({ children }: { children: ReactNode }) => {
     devFilter: filterDev(),
     genreFilter: filterGenre(),
   };
-
-  console.log(selectedGame);
 
   return (
     <SelectedContext.Provider

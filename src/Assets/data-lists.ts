@@ -1,8 +1,8 @@
 export const genresList = [
-  "MOBA (Multiplayer Online Battle Arena)",
+  "MOBA",
   "Strategy",
   "Co-op",
-  "RPG (Role-Playing Game)",
+  "RPG",
   "Sandbox",
   "Open-World",
   "Survival",
@@ -18,8 +18,8 @@ export const genresList = [
   "Card",
   "Fantasy",
   "Puzzle",
-  "FPS (First Person Shooter)",
-]
+  "FPS",
+];
 
 export const developersList = [
   "Any Developer",
@@ -43,9 +43,8 @@ export const developersList = [
   "Tarsier Studios",
   "EA (Electronic Arts)",
   "Naughty Dog",
-  "Ubisoft"
-]
-
+  "Ubisoft",
+];
 
 export const platformsList = [
   "Any Platform",
@@ -53,15 +52,15 @@ export const platformsList = [
   "Mobile",
   "Xbox",
   "PlayStation",
-  "Switch"
-]
+  "Switch",
+];
 
 export const pixelLogos = [
   "nes-logo",
   "nes-jp-logo",
   "snes-logo",
-  "snes-jp-logo"
-]
+  "snes-jp-logo",
+];
 
 export const characters = [
   "nes-octocat animate",
@@ -70,5 +69,5 @@ export const characters = [
   "nes-bulbasaur",
   "nes-charmander",
   "nes-squirtle",
-  "nes-kirby"
-]
+  "nes-kirby",
+];
