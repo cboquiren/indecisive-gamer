@@ -194,6 +194,7 @@ nav .links-container {
 #own-false .nes-icon.coin::before,
 #play-false .nes-icon.trophy::before {
   color: rgb(200, 200, 200);
+  opacity: 30%;
 }
 
 #hide-true .nes-icon.close::before {
